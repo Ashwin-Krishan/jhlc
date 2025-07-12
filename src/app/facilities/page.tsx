@@ -36,16 +36,15 @@ const facilities = [
     image: "/images/technology-lab.jpg",
     description: "Equipped for ICT and technology learning."
   },
-  // Add more as needed
 ];
 
 export default function Facilities() {
   return (
     <section className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-blue-900 mb-8">Facilities</h1>
+      <h1 className="text-3xl font-bold text-green-900 mb-8">Facilities</h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {facilities.map((facility, idx) => (
-          <div key={idx} className="bg-white border rounded-xl p-4 flex flex-col items-center shadow">
+          <div key={idx} className="bg-green-50 border border-green-100 rounded-xl p-4 flex flex-col items-center shadow">
             <Image
               src={facility.image}
               alt={facility.name}
@@ -53,8 +52,8 @@ export default function Facilities() {
               height={120}
               className="rounded-xl mb-2 object-cover"
             />
-            <h2 className="font-semibold text-lg text-gray-800">{facility.name}</h2>
-            <p className="text-sm text-gray-600 mt-2 text-center">{facility.description}</p>
+            <h2 className="font-semibold text-lg text-green-800">{facility.name}</h2>
+            <p className="text-sm text-green-900 mt-2 text-center">{facility.description}</p>
           </div>
         ))}
       </div>
