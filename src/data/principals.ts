@@ -24,7 +24,7 @@ export const founder: FounderProfile = {
     "Partnered with Mr. Ramalingam Sivagurunathar and Mrs. Valliammal Sivaguru to gift an additional 16 lms including the temple precinct.",
     "Instilled a tradition of service, philanthropy, and Saivite values that continues to guide the college community.",
   ],
-  image: "/images/mrs-visaladchy.jpeg",
+  image: "/images/mrs-visaladchy-small.jpeg",
 };
 
 export const principals: PrincipalProfile[] = [

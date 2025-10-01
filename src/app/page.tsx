@@ -13,6 +13,7 @@ type GalleryItem = {
   alt: string;
   title: string;
   description: string;
+  imageClassName?: string;
 };
 
 const galleryItems: GalleryItem[] = [
@@ -32,10 +33,10 @@ const galleryItems: GalleryItem[] = [
   },
   {
     src: "/images/temple.jpg",
-    alt: "Rajavarothaya Pillaiyar temple on campus",
-    title: "Rajavarothaya Pillaiyar Temple",
+    alt: "Visaladchy Hall on campus",
+    title: "Visaladchy Hall",
     description:
-      "The sacred heart of campus life, the temple provides daily blessings and spiritual grounding for staff and students alike.",
+      "Visaladchy Hall hosts cultural showcases, assemblies, and celebrations that bring the entire school community together.",
   },
   {
     src: "/images/mrs-visaladchy.jpeg",
@@ -43,6 +44,7 @@ const galleryItems: GalleryItem[] = [
     title: "Founder Mrs. Visaladchy Sivagurunathar",
     description:
       "Our beloved founder whose generosity gifted the Naduththoddam estate and temple, laying the foundation for a premier girls' institution in Jaffna.",
+    imageClassName: "object-top",
   },
   {
     src: "/images/gate.jpg",
@@ -51,11 +53,21 @@ const galleryItems: GalleryItem[] = [
     description:
       "The Arasady Road entrance stands as a symbol of welcome, discipline, and the vibrant community that thrives within the campus walls.",
   },
+  {
+    src: "/images/school-student-houses.jpeg",
+    alt: "Students of Jaffna Hindu Ladies College representing their houses",
+    title: "House Colours United",
+    description:
+      "Students proudly carry their house flags, celebrating teamwork, sportsmanship, and the spirited traditions of inter-house events.",
+  },
 ];
 
 export default function Home() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const activeItem = activeIndex === null ? null : galleryItems[activeIndex];
+  const currentItem = galleryItems[currentSlide];
 
   useEffect(() => {
     if (activeIndex === null) return;
@@ -65,6 +77,26 @@ export default function Home() {
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
   }, [activeIndex]);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const timer = window.setInterval(() => {
+      setCurrentSlide((previous) => (previous + 1) % galleryItems.length);
+    }, 6000);
+    return () => window.clearInterval(timer);
+  }, [isPaused]);
+
+  const goToSlide = (index: number) => {
+    if (index < 0) {
+      setCurrentSlide(galleryItems.length - 1);
+      return;
+    }
+    if (index >= galleryItems.length) {
+      setCurrentSlide(0);
+      return;
+    }
+    setCurrentSlide(index);
+  };
 
   return (
     <section className="mx-auto max-w-7xl px-4 py-12">
@@ -78,26 +110,78 @@ export default function Home() {
         <p className="max-w-3xl text-green-900 md:text-lg">
           Guided by Saivite values, academic rigor, and community service, we cultivate confident young women who contribute to the world with compassion, scholarship, and leadership.
         </p>
-        <div className="grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {galleryItems.map((item, index) => (
+        <div
+          className="w-full"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div className="relative aspect-[16/9] w-full overflow-hidden rounded-3xl border border-green-100 shadow">
             <button
-              key={item.src}
               type="button"
-              onClick={() => setActiveIndex(index)}
-              className="group relative h-40 overflow-hidden rounded-2xl border border-green-100 shadow transition hover:-translate-y-1 hover:shadow-lg"
+              onClick={() => setActiveIndex(currentSlide)}
+              className="relative block h-full w-full focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2 focus:ring-offset-green-50"
             >
               <Image
-                src={item.src}
-                alt={item.alt}
+                key={currentItem.src}
+                src={currentItem.src}
+                alt={currentItem.alt}
                 fill
-                sizes="(max-width: 768px) 50vw, 20vw"
-                className="object-cover"
+                priority
+                sizes="(max-width: 1024px) 100vw, 70vw"
+                className={`object-cover transition duration-700 ease-out ${currentItem.imageClassName ?? ""}`}
               />
-              <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/75 to-transparent px-3 py-2 text-start text-sm font-semibold text-white opacity-0 transition group-hover:opacity-100">
-                {item.title}
-              </span>
+              <span className="sr-only">Expand {currentItem.title}</span>
             </button>
-          ))}
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent p-6 text-left text-white">
+              <h3 className="text-2xl font-semibold">{currentItem.title}</h3>
+              <p className="mt-2 text-sm md:text-base">{currentItem.description}</p>
+            </div>
+            <div className="pointer-events-none absolute inset-0 flex items-center justify-between p-4">
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  goToSlide(currentSlide - 1);
+                }}
+                className="pointer-events-auto inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/40 bg-black/40 text-white transition hover:bg-black/60"
+                aria-label="View previous photo"
+              >
+                <span aria-hidden>&lt;</span>
+              </button>
+              <button
+                type="button"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  goToSlide(currentSlide + 1);
+                }}
+                className="pointer-events-auto inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/40 bg-black/40 text-white transition hover:bg-black/60"
+                aria-label="View next photo"
+              >
+                <span aria-hidden>&gt;</span>
+              </button>
+            </div>
+          </div>
+          <div className="mt-4 flex flex-wrap justify-center gap-3">
+            {galleryItems.map((item, index) => (
+              <button
+                key={item.src}
+                type="button"
+                onClick={() => goToSlide(index)}
+                className={`group relative h-16 w-24 overflow-hidden rounded-xl border transition ${
+                  index === currentSlide ? "border-green-500 shadow" : "border-green-100 hover:border-green-300"
+                }`}
+              >
+                <Image
+                  src={item.src}
+                  alt={item.alt}
+                  fill
+                  sizes="96px"
+                  className={`object-cover ${item.imageClassName ?? ""}`}
+                />
+                <span className="sr-only">{item.title}</span>
+              </button>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -110,12 +194,24 @@ export default function Home() {
           <p className="text-sm font-semibold text-green-700">Mrs. V. Perinpanathan, Principal</p>
         </div>
         <div className="space-y-4 rounded-3xl border border-green-100 bg-white p-8 shadow">
-          <h3 className="text-xl font-semibold text-green-900">Campus at a Glance</h3>
+          <h3 className="text-xl font-semibold text-green-900">The Heartbeat of JHLC</h3>
           <ul className="space-y-3 text-sm text-green-800">
-            <li><span className="font-semibold">Motto:</span> “It ought to be beautiful, I live here.”</li>
             <li><span className="font-semibold">Founded:</span> 10 September 1943 by the Saiva Paripalana Sabhai.</li>
-            <li><span className="font-semibold">Heritage:</span> Naduththoddam estate and Rajavarothaya Pillaiyar Temple gifted by the Sivagurunathar family.</li>
-            <li><span className="font-semibold">Academics:</span> From primary foundation to Advanced Level pathways in science, commerce, and arts.</li>
+            <li>
+              <span className="font-semibold">Heritage:</span> Deep cultural roots with the Naduththoddam Estate and Rajavarothaya Pillaiyar Temple, gifted by the Sivagurunathar family.
+            </li>
+            <li>
+              <span className="font-semibold">Academics:</span> Comprehensive education from Primary foundation to Advanced Level pathways in Science, Commerce, and Arts.
+            </li>
+            <li>
+              <span className="font-semibold">Technology &amp; Innovation:</span> Modern ICT laboratories, smart classrooms, and digital resources supporting advanced learning.
+            </li>
+            <li>
+              <span className="font-semibold">Extracurricular Excellence:</span> Wide range of sports, cultural programs, music, arts, and student clubs nurturing talent and leadership.
+            </li>
+            <li>
+              <span className="font-semibold">Community:</span> Currently serves [number] students with [number] dedicated staff.
+            </li>
           </ul>
           <Link href="/about" className="inline-flex items-center gap-2 text-sm font-semibold text-green-700 hover:text-green-900">
             Discover our story <span aria-hidden>→</span>
@@ -127,17 +223,23 @@ export default function Home() {
         <div className="rounded-3xl border border-green-100 bg-white p-8 shadow">
           <h3 className="text-xl font-semibold text-green-900">Welcome Message</h3>
           <p className="mt-3 text-green-800">
-            Established amidst the cultural renaissance of Jaffna, the college continues to empower generations of students to pursue knowledge, celebrate the arts, and lead with integrity. We invite Old Girls, families, and well-wishers to walk with us as we build the next chapter of excellence.
+            JHLC—where tradition inspires excellence. Welcome to Jaffna Hindu Ladies College, a proud institution dedicated to empowering young women through education rooted in Hindu values, Tamil heritage, and academic excellence.
+          </p>
+          <p className="mt-4 text-green-800">
+            Since our founding in 1943, we have remained committed to nurturing the minds and spirits of generations of students, guiding them to become confident, compassionate, and capable leaders of tomorrow. We offer a holistic learning experience that blends tradition with progress, preparing our students for life beyond the classroom.
+          </p>
+          <p className="mt-4 text-green-800">
+            We invite you to explore our website to discover more about our history, diverse programs, achievements, and the vibrant school life that makes JHLC a truly special place. Whether you are a student, parent, alumna, or visitor, we are delighted to welcome you to be part of our journey.
           </p>
           <p className="mt-4 text-sm text-green-700">
-            Guided by our Board of Management, temple traditions, and Old Girls&apos; Associations across the world, the campus remains a beacon for girls&apos; education in Sri Lanka.
+            Join us as we continue our legacy of excellence — together, we shape the future.
           </p>
         </div>
         <div className="rounded-3xl border border-green-100 bg-white p-8 shadow">
           <h3 className="text-xl font-semibold text-green-900">Honouring Our Founder</h3>
           <div className="mt-4 flex items-center gap-4">
             <Image
-              src={founder.image ?? "/images/mrs-visaladchy.jpeg"}
+              src={founder.image ?? "/images/mrs-visaladchy-small.jpeg"}
               alt={`Portrait of ${founder.name}`}
               width={96}
               height={96}
@@ -203,7 +305,13 @@ export default function Home() {
             </button>
             <div className="grid gap-6 p-6 md:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)]">
               <div className="relative aspect-[4/3] w-full overflow-hidden rounded-2xl">
-                <Image src={activeItem.src} alt={activeItem.alt} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+                <Image
+                  src={activeItem.src}
+                  alt={activeItem.alt}
+                  fill
+                  className={`object-cover ${activeItem.imageClassName ?? ""}`}
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
               <div className="space-y-4">
                 <h3 className="text-2xl font-semibold text-green-900">{activeItem.title}</h3>
