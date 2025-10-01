@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import BulletinBoard from "@/components/BulletinBoard";
 import Calendar from "@/components/Calendar";
 import { founder } from "@/data/principals";
+import { principalMessage } from "@/data/principalMessage";
 
 type GalleryItem = {
   src: string;
@@ -68,6 +69,13 @@ export default function Home() {
   const [isPaused, setIsPaused] = useState(false);
   const activeItem = activeIndex === null ? null : galleryItems[activeIndex];
   const currentItem = galleryItems[currentSlide];
+  const principalParagraphs = principalMessage.flatMap((section) =>
+    section.paragraphs.map((paragraph, index) => ({
+      language: section.language,
+      paragraph,
+      isFirstInSection: index === 0,
+    }))
+  );
 
   useEffect(() => {
     if (activeIndex === null) return;
@@ -185,41 +193,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="mt-12 grid gap-8 lg:grid-cols-[1.4fr_1fr]">
-        <div className="space-y-6 rounded-3xl border border-green-100 bg-green-50/60 p-8 text-left shadow">
-          <h2 className="text-2xl font-bold text-green-900">Principal&apos;s Message</h2>
-          <p className="text-green-800">
-            “Welcome to Jaffna Hindu Ladies College, where tradition meets innovation. Every learner is nurtured to discover her voice, achieve academic distinction, and uphold the values of humility, service, and unity.”
-          </p>
-          <p className="text-sm font-semibold text-green-700">Mrs. V. Perinpanathan, Principal</p>
-        </div>
-        <div className="space-y-4 rounded-3xl border border-green-100 bg-white p-8 shadow">
-          <h3 className="text-xl font-semibold text-green-900">The Heartbeat of JHLC</h3>
-          <ul className="space-y-3 text-sm text-green-800">
-            <li><span className="font-semibold">Founded:</span> 10 September 1943 by the Saiva Paripalana Sabhai.</li>
-            <li>
-              <span className="font-semibold">Heritage:</span> Deep cultural roots with the Naduththoddam Estate and Rajavarothaya Pillaiyar Temple, gifted by the Sivagurunathar family.
-            </li>
-            <li>
-              <span className="font-semibold">Academics:</span> Comprehensive education from Primary foundation to Advanced Level pathways in Science, Commerce, and Arts.
-            </li>
-            <li>
-              <span className="font-semibold">Technology &amp; Innovation:</span> Modern ICT laboratories, smart classrooms, and digital resources supporting advanced learning.
-            </li>
-            <li>
-              <span className="font-semibold">Extracurricular Excellence:</span> Wide range of sports, cultural programs, music, arts, and student clubs nurturing talent and leadership.
-            </li>
-            <li>
-              <span className="font-semibold">Community:</span> Currently serves [number] students with [number] dedicated staff.
-            </li>
-          </ul>
-          <Link href="/about" className="inline-flex items-center gap-2 text-sm font-semibold text-green-700 hover:text-green-900">
-            Discover our story <span aria-hidden>→</span>
-          </Link>
-        </div>
-      </div>
-
-      <div className="mt-12 grid gap-8 lg:grid-cols-2">
+      <div className="mt-12 space-y-8">
         <div className="rounded-3xl border border-green-100 bg-white p-8 shadow">
           <h3 className="text-xl font-semibold text-green-900">Welcome Message</h3>
           <p className="mt-3 text-green-800">
@@ -235,31 +209,78 @@ export default function Home() {
             Join us as we continue our legacy of excellence — together, we shape the future.
           </p>
         </div>
-        <div className="rounded-3xl border border-green-100 bg-white p-8 shadow">
-          <h3 className="text-xl font-semibold text-green-900">Honouring Our Founder</h3>
-          <div className="mt-4 flex items-center gap-4">
-            <Image
-              src={founder.image ?? "/images/mrs-visaladchy-small.jpeg"}
-              alt={`Portrait of ${founder.name}`}
-              width={96}
-              height={96}
-              className="rounded-full border border-green-200 bg-green-50 p-2 object-cover"
-            />
-            <div className="text-sm text-green-800">
-              <p className="font-semibold">{founder.name}</p>
-              <p className="mt-1">
-                Philanthropist and visionary who gifted the Naduththoddam estate and temple, making the college a sanctuary for learning and faith.
-              </p>
+
+        <div className="grid gap-8 lg:grid-cols-3">
+          <div className="lg:col-span-2 space-y-6 rounded-3xl border border-green-100 bg-green-50/60 p-8 text-left shadow">
+            <h2 className="text-2xl font-bold text-green-900">Principal&apos;s Message</h2>
+            <div className="space-y-4 rounded-2xl border border-green-100 bg-white p-6">
+              {principalParagraphs.map(({ language, paragraph, isFirstInSection }, index) => (
+                <p
+                  key={`principal-paragraph-${index}`}
+                  className={`text-base leading-relaxed ${
+                    language === "en" ? "font-semibold italic text-green-700" : "text-green-800"
+                  } ${isFirstInSection && language === "ta" ? "font-semibold" : ""}`.trim()}
+                  lang={language === "ta" ? "ta" : "en"}
+                >
+                  {paragraph}
+                </p>
+              ))}
             </div>
           </div>
-          <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-green-700">
-            {founder.contributions.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <Link href="/about#founder" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-green-700 hover:text-green-900">
-            Read the full tribute <span aria-hidden>→</span>
-          </Link>
+
+          <div className="space-y-8">
+            <div className="rounded-3xl border border-green-100 bg-white p-8 shadow">
+              <h3 className="text-xl font-semibold text-green-900">The Heartbeat of JHLC</h3>
+              <ul className="mt-4 space-y-3 text-sm text-green-800">
+                <li><span className="font-semibold">Founded:</span> 10 September 1943 by the Saiva Paripalana Sabhai.</li>
+                <li>
+                  <span className="font-semibold">Heritage:</span> Deep cultural roots with the Naduththoddam Estate and Rajavarothaya Pillaiyar Temple, gifted by the Sivagurunathar family.
+                </li>
+                <li>
+                  <span className="font-semibold">Academics:</span> Comprehensive education from Primary foundation to Advanced Level pathways in Science, Commerce, and Arts.
+                </li>
+                <li>
+                  <span className="font-semibold">Technology &amp; Innovation:</span> Modern ICT laboratories, smart classrooms, and digital resources supporting advanced learning.
+                </li>
+                <li>
+                  <span className="font-semibold">Extracurricular Excellence:</span> Wide range of sports, cultural programs, music, arts, and student clubs nurturing talent and leadership.
+                </li>
+                <li>
+                  <span className="font-semibold">Community:</span> Currently serves [number] students with [number] dedicated staff.
+                </li>
+              </ul>
+              <Link href="/about" className="inline-flex items-center gap-2 text-sm font-semibold text-green-700 hover:text-green-900">
+                Discover our story <span aria-hidden>→</span>
+              </Link>
+            </div>
+
+            <div className="rounded-3xl border border-green-100 bg-white p-8 shadow">
+              <h3 className="text-xl font-semibold text-green-900">Honouring Our Founder</h3>
+              <div className="mt-4 flex items-center gap-4">
+                <Image
+                  src={founder.image ?? "/images/mrs-visaladchy-small.jpeg"}
+                  alt={`Portrait of ${founder.name}`}
+                  width={96}
+                  height={96}
+                  className="rounded-full border border-green-200 bg-green-50 p-2 object-cover"
+                />
+                <div className="text-sm text-green-800">
+                  <p className="font-semibold">{founder.name}</p>
+                  <p className="mt-1">
+                    Philanthropist and visionary who gifted the Naduththoddam estate and temple, making the college a sanctuary for learning and faith.
+                  </p>
+                </div>
+              </div>
+              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm text-green-700">
+                {founder.contributions.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+              <Link href="/about#founder" className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-green-700 hover:text-green-900">
+                Read the full tribute <span aria-hidden>→</span>
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
