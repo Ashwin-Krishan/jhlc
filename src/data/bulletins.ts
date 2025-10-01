@@ -8,6 +8,14 @@ export type BulletinItem = {
 
 export const bulletinItems: BulletinItem[] = [
   {
+    id: "national-dance-drama-2025",
+    title: "National Dance Drama Champions",
+    excerpt:
+      "21.09.2025 — JHLC secured first place at the National Level Dance Drama Competition with a spellbinding performance by the senior cultural troupe.",
+    href: "/news#national-dance-drama-2025",
+    cta: "Celebrate the victory",
+  },
+  {
     id: "term-3",
     title: "Term 3 Readiness Week",
     excerpt:

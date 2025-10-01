@@ -48,7 +48,7 @@ export default function Calendar() {
         className="flex gap-4 overflow-x-auto pb-3 pr-2 snap-x snap-mandatory"
         aria-label="Monthly calendar events"
       >
-        {calendarEvents.map((event) => (
+        {[...calendarEvents].reverse().map((event) => (
           <article
             key={event.title}
             className="min-w-[220px] max-w-xs flex-1 snap-start rounded-2xl border border-green-100 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"

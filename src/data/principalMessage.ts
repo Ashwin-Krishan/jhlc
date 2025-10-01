@@ -26,7 +26,9 @@ export const principalMessage: PrincipalMessageSection[] = [
   {
     "language": "ta",
     "paragraphs": [
-      "செல்வி.சுமதி கந்தசாமி அதிபர் யாழ்ப்பாணம் இந்து மகளிர் கல்லூரி"
+      "செல்வி.சுமதி கந்தசாமி",
+      "அதிபர்",
+      "யாழ்ப்பாணம் இந்து மகளிர் கல்லூரி"
     ]
   }
 ] as const;

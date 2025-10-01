@@ -47,4 +47,25 @@ export const calendarEvents: CalendarEvent[] = [
     category: "sports",
     href: "/news#sports-day",
   },
+  {
+    date: "02 Oct",
+    title: "Vijayadashami Special Event",
+    description:
+      "Cultural programmes, devotional music, and student performances honour the triumph of good over evil and the blessings of learning.",
+    category: "cultural",
+  },
+  {
+    date: "08 Oct",
+    title: "Teacher’s Day Celebration",
+    description:
+      "Students express gratitude with tributes, songs, and cultural showcases celebrating the mentors who shape their journeys.",
+    category: "community",
+  },
+  {
+    date: "17 Oct",
+    title: "English Day",
+    description:
+      "Debates, drama, storytelling, and competitions in English build fluency and confidence across every grade.",
+    category: "academic",
+  },
 ];
