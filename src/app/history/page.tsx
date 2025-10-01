@@ -107,15 +107,19 @@ export default function History() {
                 );
               }
 
-              return (
-                <p
-                  key={`paragraph-${groupIndex}-${index}`}
-                  className="text-base leading-relaxed text-green-900"
-                  lang={block.language}
-                >
-                  {renderInline(block.content)}
-                </p>
-              );
+              if (block.type === "paragraph") {
+                return (
+                  <p
+                    key={`paragraph-${groupIndex}-${index}`}
+                    className="text-base leading-relaxed text-green-900"
+                    lang={block.language}
+                  >
+                    {renderInline(block.content)}
+                  </p>
+                );
+              }
+
+              return null;
             })}
           </div>
         ))}
