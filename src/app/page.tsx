@@ -214,17 +214,29 @@ export default function Home() {
           <div className="lg:col-span-2 space-y-6 rounded-3xl border border-green-100 bg-green-50/60 p-8 text-left shadow">
             <h2 className="text-2xl font-bold text-green-900">Principal&apos;s Message</h2>
             <div className="space-y-4 rounded-2xl border border-green-100 bg-white p-6">
-              {principalParagraphs.map(({ language, paragraph, isFirstInSection }, index) => (
-                <p
-                  key={`principal-paragraph-${index}`}
-                  className={`text-base leading-relaxed ${
-                    language === "en" ? "font-semibold italic text-green-700" : "text-green-800"
-                  } ${isFirstInSection && language === "ta" ? "font-semibold" : ""}`.trim()}
-                  lang={language === "ta" ? "ta" : "en"}
-                >
-                  {paragraph}
-                </p>
-              ))}
+              <div className="lg:-mr-4 lg:float-right lg:ml-6 lg:mb-4">
+                <Image
+                  src="/images/principal-message.jpg"
+                  alt="Illustration from the principal's message"
+                  width={200}
+                  height={240}
+                  className="rounded-2xl border border-green-100 object-cover shadow"
+                  priority
+                />
+              </div>
+              <div className="space-y-4">
+                {principalParagraphs.map(({ language, paragraph, isFirstInSection }, index) => (
+                  <p
+                    key={`principal-paragraph-${index}`}
+                    className={`text-base leading-relaxed ${
+                      language === "en" ? "font-semibold italic text-green-700" : "text-green-800"
+                    } ${isFirstInSection && language === "ta" ? "font-semibold" : ""}`.trim()}
+                    lang={language === "ta" ? "ta" : "en"}
+                  >
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
             </div>
           </div>
 
