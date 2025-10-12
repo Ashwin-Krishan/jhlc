@@ -19,12 +19,12 @@ const facilities = [
   },
   {
     name: "Visaalachchi Mandapam",
-    image: "/images/mandapam.jpg",
+    image: "/images/temple.jpg",
     description: "Heritage hall hosting assemblies, cultural showcases, and milestone celebrations.",
   },
   {
     name: "Rajavarothaya Temple",
-    image: "/images/temple.jpg",
+    image: "/images/rajavarothaya.jpg",
     description: "A sacred sanctuary for daily puja and spiritual guidance, central to college life.",
   },
   {
