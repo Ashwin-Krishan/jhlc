@@ -118,7 +118,7 @@ export default function About() {
       </div>
 
       <h2 className="mt-12 text-xl font-semibold text-green-800" id="history">
-        About Us
+        Our Legacy
       </h2>
       <div className="mt-4 space-y-4 text-green-900">
         {historyParagraphs.map((paragraph) => (
@@ -128,19 +128,6 @@ export default function About() {
       <p className="mt-6 rounded-2xl bg-green-50 p-4 text-sm text-green-800">
         {primarySchoolNote}
       </p>
-
-      <h2 className="mt-10 text-xl font-semibold text-green-800">Our Vision &amp; Mission</h2>
-      <div className="mt-4 space-y-3 rounded-2xl border border-green-100 bg-white p-6 shadow-sm text-green-900">
-        <p>
-          <span className="font-semibold">Vision:</span> To inspire young women to achieve excellence through education,
-          innovation, and moral values, shaping them into leaders who uplift their communities and the world.
-        </p>
-        <p>
-          <span className="font-semibold">Mission:</span> To provide a holistic education that blends academic excellence,
-          Hindu values, and modern learning, fostering personal growth, creativity, and a sense of social responsibility in
-          every student.
-        </p>
-      </div>
 
       <h2 className="mt-10 text-xl font-semibold text-green-800">Identity &amp; Traditions</h2>
       <div className="mt-6 space-y-8">
