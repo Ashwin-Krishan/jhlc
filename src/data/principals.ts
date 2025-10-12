@@ -74,7 +74,6 @@ export const principals: PrincipalProfile[] = [
     bio: [
       "Mrs. Jemmarani Sittampalam, our fourth Principal, served the college for a brief period. However, her captivating English Literature classes left a lasting impression, and she is fondly remembered at the college for the impact of her teaching.",
     ],
-    image: "/images/principals/jemmarani-sittampalam.png",
   },
   {
     slug: "clara-motwani",
@@ -86,7 +85,7 @@ export const principals: PrincipalProfile[] = [
     bio: [
       "Mrs. Clara Motwani, who hailed from the United States, served as the next Principal of the college. Though educated and raised in the West, she had a deep interest in Eastern culture, languages, and religions. Married to a North Indian, she embraced Eastern customs, often wearing a saree and blouse. She strongly promoted Tamil, while also emphasizing the global significance of English. She consistently highlighted the importance of English proficiency for higher education, especially in fields like medicine and science. Her focus on both written and spoken English enabled students to become fluent, leading many to achieve prestigious positions in their careers, bringing honor and recognition to their alma mater.",
     ],
-    image: "/images/principals/clara-motwani.png",
+    image: "/images/principals/jemmarani-sittampalam.png",
   },
   {
     slug: "sarojini-rao",
@@ -100,7 +99,7 @@ export const principals: PrincipalProfile[] = [
       "During the 1954 carnival and lottery organized by the Board of Management, she was actively involved in every aspect, earning recognition as a key figure in the school's development. Under her leadership, Jaffna Hindu Ladies' College was upgraded to a Grade II institution with an enrollment of over 1,100 students, and university entrance classes were introduced.",
       "Her teaching of Health and Home Science followed the traditional Guru-Pupil model, offering students a fresh and inspiring educational experience. Through the introduction of the college motto, \"It ought to be beautiful, I live here,\" she instilled in students a deep sense of pride and respect for their school.",
     ],
-    image: "/images/principals/sarojini-rao.png",
+    image: "/images/principals/clara-motwani.png",
   },
   {
     slug: "vimala-arumugam",
@@ -114,7 +113,7 @@ export const principals: PrincipalProfile[] = [
       "She played a key role during a crucial period in the early 1960s, successfully guiding the college through its transition from being Board-managed to coming under the administration of the Education Department.",
       "Mrs. Arumugam also spearheaded major fundraising initiatives, including organizing a special dance performance by Mrs. Karthika Ganeshan, a renowned artist and distinguished alumna of the college. Additionally, she encouraged students to stage the dramas \"Katpukkanal\" at the Jaffna Town Hall and \"Nala-Thamayanthi\" at the college to further support fundraising efforts. These contributions, combined with government funding, made it possible to construct the college's Assembly Hall, which was named in honor of the founder, Visaladchy Sivagurunathar.",
     ],
-    image: "/images/principals/vimala-arumugam.png",
+    image: "/images/principals/sarojini-rao.png",
   },
   {
     slug: "pathmawathy-ramanathan",
@@ -128,7 +127,7 @@ export const principals: PrincipalProfile[] = [
       "Several key infrastructure projects were completed during her tenure, including the administration block, a new science laboratory, another science facility with 10 classrooms, and the boundary wall around the college hostel. She also oversaw the renovation of the Pillaiyar Temple and the successful Maha Kumbabishekam ceremony.",
       "Her leadership led to notable achievements in academics, with increased university admissions, as well as excellence in dance, drama, music, and sports-earning the college national recognition in Sri Lanka. Many who studied under her or worked with her fondly refer to her as the \"Uncrowned Queen\" of the college, and her time in office is often celebrated as its \"Golden Era.\"",
     ],
-    image: "/images/principals/pathmawathy-ramanathan.png",
+    image: "/images/principals/vimala-arumugam.png",
   },
   {
     slug: "thivyasironmany-nagarajah",
@@ -142,7 +141,7 @@ export const principals: PrincipalProfile[] = [
       "She established a Prize Day Committee, which set September 10th as the official date for the event. The first Prize Day was held on September 10, 1991. Despite the challenging period of conflict, teachers, students, and parents actively supported the college's initiatives.",
       "The Golden Jubilee of the college was celebrated on a grand scale, featuring a four-day exhibition and two days of cultural performances by students and alumnae. Mrs. Nagarajah also laid the foundation stone for a Golden Jubilee Block. The wide publicity surrounding the celebrations inspired former students in Colombo and Canada to establish Old Girls' Associations in their regions.",
     ],
-    image: "/images/principals/thivyasironmany-nagarajah.png",
+    image: "/images/principals/pathmawathy-ramanathan.png",
   },
   {
     slug: "saraswathy-jeyarajah",
@@ -158,6 +157,7 @@ export const principals: PrincipalProfile[] = [
       "Mrs. Jeyarajah also undertook management training in Delhi and, in recognition of her committed service, was elected Senior Vice President of the All Ceylon Tamil Teachers Union. She and the college extended compassion to those in need by offering shelter and support during difficult times.",
       "During her tenure, she led students to Colombo twice to showcase their talents through dance performances. She retired on 15th January 2006, leaving behind a legacy of resilience, leadership, and progress.",
     ],
+    image: "/images/principals/thivyasironmany-nagarajah.png",
   },
   {
     slug: "vethanayaki-perinpanathan",
