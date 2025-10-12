@@ -50,7 +50,7 @@ const flagshipHighlight: IdentityHighlight = {
           className="mx-auto rounded-2xl object-contain shadow-md"
         />
         <p className="mt-4 text-base leading-relaxed text-green-700">
-          Green and white stripes encircle the sacred lamp and Veena, symbolising enlightenment, the arts, and unity under Saivite values. The emblem shines at assemblies, investitures, and inter-house parades as a proud reminder of our heritage.
+          The flag of Jaffna Hindu Ladies College, proudly adorned in green and white, embodies the spirit and values of our institution. It serves as a reminder of unity and pride, inspiring every student to uphold the honour of Jaffna Hindu Ladies’ College in all her endeavours.
         </p>
       </div>
       <div className="overflow-hidden rounded-3xl border border-green-200 bg-white">
