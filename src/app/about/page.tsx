@@ -50,7 +50,7 @@ const flagshipHighlight: IdentityHighlight = {
           className="mx-auto rounded-2xl object-contain shadow-md"
         />
         <p className="mt-4 text-base leading-relaxed text-green-700">
-          Green and gold stripes encircle the sacred lamp and Veena, symbolising enlightenment, the arts, and unity under Saivite values. The emblem shines at assemblies, investitures, and inter-house parades as a proud reminder of our heritage.
+          Green and white stripes encircle the sacred lamp and Veena, symbolising enlightenment, the arts, and unity under Saivite values. The emblem shines at assemblies, investitures, and inter-house parades as a proud reminder of our heritage.
         </p>
       </div>
       <div className="overflow-hidden rounded-3xl border border-green-200 bg-white">
