@@ -196,9 +196,9 @@ export default function Home() {
 
       <div className="mt-12 space-y-8">
         <div className="rounded-3xl border border-green-100 bg-white p-8 shadow">
-          <h3 className="text-xl font-semibold text-green-900">Welcome Message</h3>
+          <h2 className="text-2xl font-bold text-green-900 text-center">JHLC - Where Tradition Inspires Excellence</h2>
           <p className="mt-3 text-green-800">
-            JHLC—where tradition inspires excellence. Welcome to Jaffna Hindu Ladies College, a proud institution dedicated to empowering young women through education rooted in Hindu values, Tamil heritage, and academic excellence.
+            Welcome to Jaffna Hindu Ladies College, a proud institution dedicated to empowering young women through education rooted in Hindu values, Tamil heritage, and academic excellence.
           </p>
           <p className="mt-4 text-green-800">
             Since our founding in 1943, we have remained committed to nurturing the minds and spirits of generations of students, guiding them to become confident, compassionate, and capable leaders of tomorrow. We offer a holistic learning experience that blends tradition with progress, preparing our students for life beyond the classroom.
@@ -280,7 +280,7 @@ export default function Home() {
                 <div className="text-sm text-green-800">
                   <p className="font-semibold">{founder.name}</p>
                   <p className="mt-1">
-                    Philanthropist and visionary who gifted the Naduththoddam estate and temple, making the college a sanctuary for learning and faith.
+                    Philanthropist and visionary who gifted the Naduththoddam estate, making the college a sanctuary for learning and faith.
                   </p>
                 </div>
               </div>
@@ -300,6 +300,21 @@ export default function Home() {
       <div className="mt-12 grid gap-8 lg:grid-cols-2">
         <Calendar />
         <BulletinBoard />
+      </div>
+
+      <div className="mt-12 rounded-3xl border border-green-100 bg-white p-8 shadow text-center">
+        <h3 className="text-xl font-semibold text-green-900">Help us make a difference</h3>
+        <p className="mt-3 text-green-800">
+          Where the school&apos;s future needs are listed. Check back soon to see how you can support upcoming projects.
+        </p>
+        <Link
+          href="#"
+          onClick={(event) => event.preventDefault()}
+          className="mt-5 inline-flex items-center justify-center rounded-full border border-green-200 bg-green-50 px-5 py-2 text-sm font-semibold text-green-800 shadow-sm transition hover:bg-green-100"
+          aria-disabled="true"
+        >
+          View future needs
+        </Link>
       </div>
 
       <div className="mt-12 rounded-3xl border border-green-100 bg-green-50 p-8 text-center shadow">

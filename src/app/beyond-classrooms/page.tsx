@@ -24,7 +24,7 @@ const clubs: ClubProfile[] = [
     ],
   },
   {
-    name: "Arts & Culture Union",
+    name: "Arts and Culture Union",
     objective: "To nurture the creative spirit of students through dance, music, drama, literature, and visual arts.",
     goals: [
       "Inspire self-expression and foster cultural appreciation.",
@@ -57,7 +57,7 @@ const clubs: ClubProfile[] = [
     goals: [
       "Organize and celebrate all major Hindu festivals.",
       "Perform special rituals on significant religious occasions.",
-      "Arrange poojas and ceremonies at the school temple to encourage spiritual growth and cultural awareness.",
+      "Arrange poojas and other ceremonies at the school temple to encourage spiritual growth and cultural awareness.",
     ],
   },
   {
@@ -89,23 +89,23 @@ const clubs: ClubProfile[] = [
   },
   {
     name: "Computer Union",
-    objective: "To enhance students’ digital literacy, technical skills, and innovative thinking through computing and programming activities.",
+    objective: "To enhance students' digital literacy, technical skills, and innovative thinking through computing and programming activities.",
     goals: [
-      "Train younger students in typing and foundational computer operations.",
+      "Train younger students in typing and basic computer operations.",
       "Provide programming training for senior students.",
-      "Organize quizzes and competitions to expand computer knowledge.",
-      "Participate in and support innovation programmes that encourage creative problem-solving using technology.",
+      "Organize quizzes and competitions to test and expand computer knowledge.",
+      "Participate in and support innovation programs to encourage creative problem-solving using technology.",
     ],
   },
   {
     name: "English Union",
-    objective: "To enhance students’ proficiency in English and foster confidence in communication through diverse language and drama activities.",
+    objective: "To enhance students' proficiency in English and foster confidence in communication through diverse language and drama activities.",
     goals: [
-      "Encourage participation in English language and drama competitions from class to national level.",
-      "Conduct weekly Thursday morning assembly programmes to promote English usage.",
+      "Encourage student participation in English language and drama competitions from class level to national level.",
+      "Conduct weekly Thursday morning assembly programs to promote English usage.",
       "Celebrate English Day and publish the annual magazine Ladies Leap.",
-      "Support participation in external competitions to aid professional and personal development.",
-      "Improve listening, speaking, reading, and writing skills through immersive practice.",
+      "Support students in participating in external competitions to aid their professional and personal development.",
+      "Improve the four key English language skills: listening, speaking, reading, and writing.",
     ],
   },
   {
@@ -119,11 +119,11 @@ const clubs: ClubProfile[] = [
   },
   {
     name: "Tamil Union",
-    objective: "To promote the Tamil language, literature, and cultural values while developing communication and creative skills.",
+    objective: "To promote the Tamil language, literature, and cultural values while developing students' communication and creative skills.",
     goals: [
       "Prepare students for regional and national Tamil competitions, including essay contests.",
-      "Train students to lead morning prayers and share reflections for the day.",
-      "Organize and celebrate Tamil Day at school to honour the language and its heritage.",
+      "Train students to lead morning prayers and share good thoughts of the day.",
+      "Organize and celebrate Tamil Day at school to honor the language and its heritage.",
     ],
   },
   {
@@ -133,6 +133,15 @@ const clubs: ClubProfile[] = [
       "Capture and document photographs of school functions and special moments.",
       "Participate in photography seminars to enhance technical skills and artistic vision.",
       "Encourage creativity, observation, and storytelling through images.",
+    ],
+  },
+  {
+    name: "Environmental Club",
+    objective: "To nurture stewardship of the environment through awareness, action, and sustainable habits within the school community.",
+    goals: [
+      "Lead campus clean-up drives and tree-planting initiatives.",
+      "Run awareness campaigns on recycling, waste reduction, and conservation.",
+      "Organize eco-themed exhibitions, talks, and competitions to inspire responsible citizenship.",
     ],
   },
   {
@@ -154,6 +163,15 @@ const clubs: ClubProfile[] = [
       "Develop discipline, coordination, and confidence through regular practice and performance.",
       "Promote unity and pride by leading the march-past and fostering a lively atmosphere.",
       "Represent the school with excellence and uphold its traditions through quality music.",
+    ],
+  },
+  {
+    name: "Teachers Club",
+    objective: "To strengthen collegiality, continuous learning, and collaborative leadership among the teaching community.",
+    goals: [
+      "Share best practices and innovations that enhance classroom teaching and student support.",
+      "Plan professional development sessions, peer observations, and mentoring opportunities.",
+      "Coordinate staff-led initiatives that enrich school culture and model lifelong learning.",
     ],
   },
 ];
