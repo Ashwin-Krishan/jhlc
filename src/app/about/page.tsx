@@ -34,6 +34,57 @@ const identityHighlights: IdentityHighlight[] = [
   },
 ];
 
+const anthemVerses: string[][] = [
+  [
+    "திருமிகு மெ மெ ங்கள் யாழ்நகர்க் கணியாய்த்",
+    "திகழ்ந்திடும் கல்லூரி - எங்கள்",
+    "பெரு வரு மிந்துப் பெண்களுக் கொளியாய்ப்",
+    "பிறங்கிடுங் கல்லூரி - உயர்",
+    "மருவுறு கலைகள் யாவையும் மின்பாய்",
+    "வழங்கிடுங் கல்லூரி - உனைப்",
+    "பெருகிடும் அன்பால் புந்தியில் வைத்துன்",
+    "புகழினை னை வாழ்த்ததோமமோ - உனை",
+    "வந்தே மாதரம் வந்தே மாதரம்",
+    "என்று வணங்கோமோ.",
+  ],
+  [
+    "இந்து மதப் புகழ் எங்கும் விளங்கிட",
+    "இசைந்திடுங் கல்லூரி - இயல்",
+    "சிந்தைவளம் பெற மெய்ப் பொருளறிவைச்",
+    "சேர்த்திடுங் கல்லூரி - வளர்",
+    "செந்தமிழ் ஆங்கில வடமமொழி அறிவைச்",
+    "சுரந்திடுங் கல்லூரி - உனை",
+    "வந்தனை செய்து பைந்தமிழ் மாலை",
+    "வாழ்த் ததொடுசூ டோமமோ - உனை",
+    "வந்தே மாதரம் வந்தே மாதரம்",
+    "என்று வணங்கோமோ.",
+  ],
+  [
+    "மங்கையர் மாண்பை மன்பதை அறிய",
+    "முழங்கிடுங் கல்லூரி - ஒளி",
+    "பொங்குயர் அறிவுச் சுடரினை யுளத்திற்",
+    "பொறித்திடுங் கல்லூரி - இந்து",
+    "நங்கையர் வாழ்வின் லட்சிய மனைத்தும்",
+    "நல்கிடுங் கல்லூரி - உனை",
+    "அங்கையில் மலர்ககொண் டன்புடன் பாடி",
+    "அனுதினம் ஏத்ததோமமோ - உனை",
+    "வந்தே மாதரம் வந்தே மாதரம்",
+    "என்று வணங்கோமோ.",
+  ],
+  [
+    "கலைமகள் உலவக் களிநடம் புரியக்",
+    "கண்டிடுங் கல்லூரி - என்றும்",
+    "மலைமகள் ககொழுநன் மலரடி பபோற்றி",
+    "மாண்புறுங் கல்லூரி - நித்தம்",
+    "நிலமகள் நெற்றித் திலகமென் றேத்த",
+    "நிலைத்திடுங் கல்லூரி - உனைத்",
+    "தலைமுறையாகத் ததொழு துளங் குளிரத்",
+    "துதி சொல்லிப் பாடோமமோ - உனை",
+    "வந்தே மாதரம் வந்தே மாதரம்",
+    "என்று வணங்கோமோ.",
+  ],
+];
+
 const flagshipHighlight: IdentityHighlight = {
   title: "School Flag & Anthem",
   description:
@@ -53,16 +104,19 @@ const flagshipHighlight: IdentityHighlight = {
           The flag of Jaffna Hindu Ladies College, proudly adorned in green and white, embodies the spirit and values of our institution. It serves as a reminder of unity and pride, inspiring every student to uphold the honour of Jaffna Hindu Ladies’ College in all her endeavours.
         </p>
       </div>
-      <div className="overflow-hidden rounded-3xl border border-green-200 bg-white">
-        <iframe
-          src="/school-anthem.pdf#toolbar=0"
-          title="Jaffna Hindu Ladies College School Anthem"
-          className="h-[34rem] w-full"
-          aria-label="Embedded PDF of the Jaffna Hindu Ladies College School Anthem"
-        />
-        <p className="px-5 pb-5 pt-3 text-sm text-green-600">
-          Ensure PDF viewing is enabled in your browser to see the full lyrics and musical score, honouring Pillaiyar&apos;s blessings and the college&apos;s call to wisdom and service.
-        </p>
+      <div className="rounded-3xl border border-green-200 bg-white p-6 text-center">
+        <h4 className="text-lg font-semibold text-green-900">கல்லூரி கீதம்</h4>
+        <div className="mt-4 space-y-6 text-green-900 mx-auto max-w-2xl">
+          {anthemVerses.map((lines, verseIndex) => (
+            <div key={verseIndex} className="space-y-1.5 text-center">
+              {lines.map((line, lineIndex) => (
+                <p key={`${verseIndex}-${lineIndex}`} className="leading-relaxed whitespace-pre-line" lang="ta">
+                  {line}
+                </p>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   ),
@@ -113,7 +167,6 @@ export default function About() {
         <div className="space-y-2">
           <p className="text-sm uppercase tracking-[0.35em] text-green-600">Jaffna Hindu Ladies College</p>
           <h1 className="text-3xl font-extrabold text-green-900 md:text-4xl">“It ought to be beautiful, I live here.”</h1>
-          <p className="text-xl font-semibold text-green-900 md:text-2xl">“நாம் இங்கு கல்வி கற்பதன் பயன் செம்மையாக வாழ்வதற்கே”</p>
         </div>
       </div>
 
