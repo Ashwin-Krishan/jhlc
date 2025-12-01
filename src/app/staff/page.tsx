@@ -173,9 +173,6 @@ export default function Staff() {
   return (
     <section className="max-w-5xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-green-900 mb-6">Staff Directory</h1>
-      <p className="text-green-800">
-        Contact the college office at <a href="tel:+94212221234" className="text-green-700 hover:text-green-900">+94 21 222 1234</a> for appointments with staff. Browse our photographic directory below; the order surfaces the Principal and Vice Principals first.
-      </p>
 
       <h2 className="mt-8 text-xl font-semibold text-green-800" id="staff-list">Staff Photos &amp; Names</h2>
       <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

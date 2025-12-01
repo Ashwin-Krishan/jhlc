@@ -81,7 +81,7 @@ export default function History() {
   return (
     <section className="mx-auto max-w-4xl px-4 py-12">
       <h1 className="text-3xl font-bold text-green-900">Heritage &amp; History</h1>
-      <p className="mt-3 text-green-800">
+      <p className="mt-3 text-green-800 text-justify">
         A bilingual chronicle capturing the milestones of Jaffna Hindu Ladies College exactly as preserved in our archival
         record.
       </p>
@@ -111,7 +111,7 @@ export default function History() {
                 return (
                   <p
                     key={`paragraph-${groupIndex}-${index}`}
-                    className="text-base leading-relaxed text-green-900"
+                    className="text-base leading-relaxed text-green-900 text-justify"
                     lang={block.language}
                   >
                     {renderInline(block.content)}

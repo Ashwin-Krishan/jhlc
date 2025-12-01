@@ -166,6 +166,51 @@ const clubs: ClubProfile[] = [
     ],
   },
   {
+    name: "Student Parliament",
+    objective: "To cultivate democratic leadership and collaborative problem-solving through student-led ministries.",
+    goals: [
+      "Hold elections for Speaker, ministries, and class representatives to model civic processes.",
+      "Operate ministries such as Education, Health & Wellbeing, Environment, Culture & Sports, and Community Relations to deliver student services.",
+      "Debate school improvement proposals and implement action plans that reflect student voice.",
+    ],
+  },
+  {
+    name: "Board of Prefects",
+    objective: "To uphold school values, mentor peers, and support smooth operations across events and daily routines.",
+    goals: [
+      "Lead assemblies, ceremonies, and key school functions with discipline and dignity.",
+      "Guide younger students on conduct, study habits, and participation in school life.",
+      "Coordinate with staff to maintain a respectful, safe, and inclusive campus environment.",
+    ],
+  },
+  {
+    name: "St. John’s Ambulance",
+    objective: "To equip students with first-aid skills and a spirit of service in health-related emergencies.",
+    goals: [
+      "Train members in certified first aid and emergency response.",
+      "Provide medical support at sports meets, parades, and school events.",
+      "Run health-awareness sessions on safety, hygiene, and wellness for the student body.",
+    ],
+  },
+  {
+    name: "Girl Guide",
+    objective: "To build character, resilience, and community-minded leadership through guiding principles.",
+    goals: [
+      "Develop outdoor skills, teamwork, and self-reliance through camps and challenges.",
+      "Lead service projects that benefit the school and wider community.",
+      "Encourage ethical decision-making, kindness, and global citizenship among members.",
+    ],
+  },
+  {
+    name: "Capital Stock Exchange Opportunities",
+    objective: "To introduce students to capital markets, financial literacy, and responsible investing.",
+    goals: [
+      "Explore stock exchange fundamentals, personal finance, and portfolio simulations.",
+      "Invite industry professionals for seminars on market trends and career pathways.",
+      "Guide students to analyze companies, track economic indicators, and practice informed decision-making.",
+    ],
+  },
+  {
     name: "Teachers Club",
     objective: "To strengthen collegiality, continuous learning, and collaborative leadership among the teaching community.",
     goals: [
