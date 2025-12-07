@@ -33,6 +33,16 @@ export const resourceCategories: ResourceCategory[] = [
         description: "Interactive lessons and textbooks provided by the Ministry of Education.",
         url: "https://www.e-thaksalawa.moe.gov.lk/",
       },
+      {
+        title: "DP Education",
+        description: "Free online learning platform with Sinhala and Tamil content across core subjects.",
+        url: "https://www.dpeducation.lk/en/",
+      },
+      {
+        title: "Noolaham: யாழ்ப்பாணம் இந்து மகளிர் கல்லூரி",
+        description: "Digitised archives, publications, and references related to Jaffna Hindu Ladies College.",
+        url: "https://www.noolaham.org/wiki/index.php/%E0%AE%B5%E0%AE%B2%E0%AF%88%E0%AE%B5%E0%AE%BE%E0%AE%9A%E0%AE%B2%E0%AF%8D:%E0%AE%AF%E0%AE%BE%E0%AE%B4%E0%AF%8D%E0%AE%AA%E0%AF%8D%E0%AE%AA%E0%AE%BE%E0%AE%A3%E0%AE%AE%E0%AF%8D_%E0%AE%87%E0%AE%A8%E0%AF%8D%E0%AE%A4%E0%AF%81_%E0%AE%AE%E0%AE%95%E0%AE%B3%E0%AE%BF%E0%AE%B0%E0%AF%8D_%E0%AE%95%E0%AE%B2%E0%AF%8D%E0%AE%B2%E0%AF%82%E0%AE%B0%E0%AE%BF",
+      },
     ],
   },
   {

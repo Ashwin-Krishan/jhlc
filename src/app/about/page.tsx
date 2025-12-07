@@ -43,16 +43,16 @@ const anthemVerses: string[][] = [
     "மருவுறு கலைகள் யாவையும் மின்பாய்",
     "வழங்கிடுங் கல்லூரி - உனைப்",
     "பெருகிடும் அன்பால் புந்தியில் வைத்துன்",
-    "புகழினை னை வாழ்த்ததோமோ - உனை",
+    "புகழினை வாழ்த்ததோமோ - உனை",
     "வந்தே மாதரம் வந்தே மாதரம்",
     "என்று வணங்கோமோ.",
   ],
   [
     "இந்து மதப் புகழ் எங்கும் விளங்கிட",
     "இசைந்திடுங் கல்லூரி - இயல்",
-    "சிந்தைவளம் பெற மெய்ப் பொருளறிவைச்",
+    "சிந்தை வளம் பெற மெய்ப் பொருளறிவைச்",
     "சேர்த்திடுங் கல்லூரி - வளர்",
-    "செந்தமிழ் ஆங்கில வடமமொழி அறிவைச்",
+    "செந்தமிழ் ஆங்கில வடமொழி அறிவைச்",
     "சுரந்திடுங் கல்லூரி - உனை",
     "வந்தனை செய்து பைந்தமிழ் மாலை",
     "வாழ்த் தொடுசூ டோமோ - உனை",
@@ -106,11 +106,17 @@ const flagshipHighlight: IdentityHighlight = {
       </div>
       <div className="rounded-3xl border border-green-200 bg-white p-6 text-center">
         <h4 className="text-lg font-semibold text-green-900">கல்லூரி கீதம்</h4>
-        <div className="mt-4 space-y-6 text-green-900 mx-auto max-w-2xl">
+        <div className="mt-4 space-y-3 text-green-900 mx-auto max-w-2xl">
           {anthemVerses.map((lines, verseIndex) => (
-            <div key={verseIndex} className="space-y-1.5 text-center">
+            <div key={verseIndex} className="space-y-0.5">
               {lines.map((line, lineIndex) => (
-                <p key={`${verseIndex}-${lineIndex}`} className="leading-relaxed whitespace-pre-line" lang="ta">
+                <p
+                  key={`${verseIndex}-${lineIndex}`}
+                  className={`leading-snug whitespace-pre-line text-left ${
+                    lineIndex % 2 === 0 ? "pl-50" : "pl-60"
+                  }`}
+                  lang="ta"
+                >
                   {line}
                 </p>
               ))}

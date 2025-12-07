@@ -26,13 +26,6 @@ const galleryItems: GalleryItem[] = [
       "The main frontage of Jaffna Hindu Ladies College, welcoming generations of students to a campus rich with Saivite values and academic excellence.",
   },
   {
-    src: "/images/saraswati.jpg",
-    alt: "Saraswati statue at the college",
-    title: "Goddess Saraswati Statue",
-    description:
-      "Honouring the patron of knowledge, music, and arts, this statue inspires every student to pursue wisdom with humility and grace.",
-  },
-  {
     src: "/images/temple.jpg",
     alt: "Visaladchy Hall on campus",
     title: "Visaladchy Hall",
@@ -242,9 +235,9 @@ export default function Home() {
           </div>
 
           <div className="space-y-8">
-            <div className="rounded-3xl border border-green-100 bg-white p-8 shadow">
+            <div className="rounded-3xl border border-green-100 bg-white p-8 shadow text-center">
               <h3 className="text-xl font-semibold text-green-900">The Heartbeat of JHLC</h3>
-              <ul className="mt-4 space-y-3 text-sm text-green-800">
+              <ul className="mt-4 space-y-3 text-sm text-green-800 text-center mx-auto max-w-xl">
                 <li><span className="font-semibold">Founded:</span> 10 September 1943 by the Saiva Paripalana Sabhai.</li>
                 <li>
                   <span className="font-semibold">Heritage:</span> Deep cultural roots with the Naduththoddam Estate and Rajavarothaya Pillaiyar Temple, gifted by the Sivagurunathar family.
@@ -262,7 +255,7 @@ export default function Home() {
                   <span className="font-semibold">Community:</span> Currently serves [number] students with [number] dedicated staff.
                 </li>
               </ul>
-              <Link href="/about" className="inline-flex items-center gap-2 text-sm font-semibold text-green-700 hover:text-green-900">
+              <Link href="/about" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-green-700 hover:text-green-900">
                 Discover our story <span aria-hidden>→</span>
               </Link>
             </div>
@@ -293,6 +286,18 @@ export default function Home() {
                 Read the full tribute <span aria-hidden>→</span>
               </Link>
             </div>
+            <div className="rounded-3xl border border-green-100 bg-white p-8 shadow">
+              <h3 className="text-xl font-semibold text-green-900">Wishes from Former Principals &amp; Teachers</h3>
+              <p className="mt-3 text-sm text-green-800">
+                A heartfelt collection of blessings and reflections shared by the leaders and teachers who shaped our journey.
+              </p>
+              <Link
+                href="/wishes"
+                className="mt-4 inline-flex items-center justify-center rounded-full border border-green-200 bg-green-50 px-4 py-2 text-sm font-semibold text-green-800 shadow-sm transition hover:bg-green-100"
+              >
+                View the wishes
+              </Link>
+            </div>
           </div>
         </div>
       </div>
@@ -308,10 +313,10 @@ export default function Home() {
           Where the school&apos;s future needs are listed. Check back soon to see how you can support upcoming projects.
         </p>
         <Link
-          href="#"
-          onClick={(event) => event.preventDefault()}
+          href="https://docs.google.com/document/d/12oBuxwaKLFVlnEZkFMk3IDsE_SnBDRHRIOcRmdx7qsE/edit?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
           className="mt-5 inline-flex items-center justify-center rounded-full border border-green-200 bg-green-50 px-5 py-2 text-sm font-semibold text-green-800 shadow-sm transition hover:bg-green-100"
-          aria-disabled="true"
         >
           View future needs
         </Link>
@@ -329,6 +334,14 @@ export default function Home() {
           </Link>
           <Link href="/resources" className="rounded-full border border-green-200 bg-white px-4 py-2 text-green-700 hover:text-green-900">
             Learning Resources
+          </Link>
+          <Link
+            href="https://www.facebook.com/profile.php?id=100091343755367"
+            target="_blank"
+            rel="noreferrer"
+            className="rounded-full border border-green-200 bg-white px-4 py-2 text-green-700 hover:text-green-900"
+          >
+            Facebook
           </Link>
         </div>
       </div>

@@ -240,21 +240,6 @@ const sports = [
   },
 ];
 
-const fineArts = [
-  {
-    title: "Music Society",
-    description: "Carnatic vocal, veena, and choir ensembles performing at temple festivals and competitions.",
-  },
-  {
-    title: "Dance Troupe",
-    description: "Bharatanatyam, folk fusion, and contemporary showcases choreographed for island-wide stages.",
-  },
-  {
-    title: "Drama Guild",
-    description: "Tamil and English theatre productions cultivating scriptwriting, stagecraft, and elocution.",
-  },
-];
-
 const academic = [
   {
     title: "Science Circle",
@@ -333,13 +318,6 @@ export default function BeyondClassrooms() {
         id: sport.title.toLowerCase().replace(/[^a-z]+/g, "-"),
         name: sport.title,
         summary: sport.description,
-      })))}
-
-      <h2 className="mt-10 text-xl font-semibold text-green-800" id="fine-arts">Fine Arts</h2>
-      {renderList(fineArts.map((item) => ({
-        id: item.title.toLowerCase().replace(/[^a-z]+/g, "-"),
-        name: item.title,
-        summary: item.description,
       })))}
 
       <h2 className="mt-10 text-xl font-semibold text-green-800" id="academic">Academic Competitions</h2>
