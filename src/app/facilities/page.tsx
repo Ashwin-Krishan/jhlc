@@ -7,6 +7,7 @@ type Facility = {
   details?: string[];
 };
 
+
 const facilities: Facility[] = [
   {
     name: "Library",
@@ -16,25 +17,25 @@ const facilities: Facility[] = [
   },
   {
     name: "Sports Complex",
-    image: "/images/sports.jpg",
+    image: "/NewGallery/Badminton.jpg",
     description:
       "Netball and basketball courts, table tennis, cricket grounds, and track-and-field spaces that promote discipline, teamwork, and lifelong fitness.",
   },
   {
     name: "Visaladchi Mandapam",
-    image: "/images/temple.jpg",
+    image: "/NewGallery/Auditorium.jpg",
     description:
       "Our modern auditorium for assemblies, cultural showcases, debates, competitions, and milestone celebrations with professional seating and acoustics.",
   },
   {
     name: "Rajavarothayar Temple",
-    image: "/images/rajavarothaya.jpg",
+    image: "/NewGallery/temple.jpg",
     description:
       "A serene sanctuary where daily prayers and observances deepen the college's cultural roots and encourage reflection, respect, and harmony.",
   },
   {
     name: "Science Laboratories",
-    image: "/images/science-lab.jpg",
+    image: "/NewGallery/CompLab2.jpg",
     description:
       "Hands-on spaces that support experimentation and discovery across the life and physical sciences for every stage of study.",
     details: [
@@ -47,7 +48,7 @@ const facilities: Facility[] = [
   },
   {
     name: "Technology Laboratories",
-    image: "/images/technology-lab.jpg",
+    image: "/NewGallery/CompLab2.jpg",
     description:
       "ICT suites with modern computers, digital learning tools, and collaborative workstations that foster coding, design thinking, and real-world problem solving.",
   },

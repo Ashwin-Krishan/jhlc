@@ -123,6 +123,21 @@ const flagshipHighlight: IdentityHighlight = {
             </div>
           ))}
         </div>
+        <div className="mt-6 space-y-2">
+          <audio
+            controls
+            className="w-full max-w-2xl rounded-2xl border border-green-100 bg-green-50 p-3 shadow-sm"
+          >
+            <source src="/Anthem.m4a" type="audio/mp4" />
+            Your browser does not support the audio element.
+          </audio>
+          <div className="text-sm text-green-700">
+            <p className="font-semibold">Listen to the college anthem</p>
+            <Link href="/Anthem.m4a" className="text-green-800 underline underline-offset-4 hover:text-green-900">
+              Download the recording
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   ),

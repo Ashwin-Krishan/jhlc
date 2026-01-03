@@ -1,6 +1,32 @@
 import Image from "next/image";
 
-const photos = [
+const newGalleryPhotos = [
+  "/NewGallery/Assembly%20hall.jpeg",
+  "/NewGallery/Auditorium.jpg",
+  "/NewGallery/Badminton.jpg",
+  "/NewGallery/Band.jpeg",
+  "/NewGallery/Basketball%20court%20.jpg",
+  "/NewGallery/CompLab2.jpg",
+  "/NewGallery/Computer%20lab%201.jpg",
+  "/NewGallery/Computer%20lab%203.jpg",
+  "/NewGallery/Ground%20pavilion.jpg",
+  "/NewGallery/Grounds%201.jpeg",
+  "/NewGallery/Main%20hall%20.jpeg",
+  "/NewGallery/Main%20hall%202.jpeg",
+  "/NewGallery/Morning%20yoga.jpeg",
+  "/NewGallery/Morning%20yoga%202.jpeg",
+  "/NewGallery/Prefect%20Badges%20.jpeg",
+  "/NewGallery/Saraswathi%20statue.jpeg",
+  "/NewGallery/Solar%20panels%20.jpeg",
+  "/NewGallery/Stage.jpeg",
+  "/NewGallery/Temple.jpg",
+  "/NewGallery/Temple%201.jpeg",
+  "/NewGallery/Temple%202.jpeg",
+  "/NewGallery/Temple%203.jpeg",
+  "/NewGallery/Temple%204.jpeg",
+];
+
+const legacyPhotos = [
   "/images/PhotoGallery/54ad4fb3-7f77-4f9b-aa05-e4c9f9188a25.jpg",
   "/images/PhotoGallery/6e7a4538-b122-4ece-8e70-a6fd0a86cbe9.jpg",
   "/images/PhotoGallery/IMG-20251007-WA0005.jpg",
@@ -22,6 +48,8 @@ const photos = [
   "/images/PhotoGallery/IMG-20251010-WA0048.jpg",
   "/images/PhotoGallery/f57f6b5e-e7af-4a04-b642-5bce699800f0.jpg",
 ];
+
+const photos = [...newGalleryPhotos, ...legacyPhotos];
 
 export default function Gallery() {
   return (
