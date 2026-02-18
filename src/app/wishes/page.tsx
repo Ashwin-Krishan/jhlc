@@ -4,7 +4,8 @@ type Wish = {
   author: string;
   role: string;
   message: string[];
-  image: {
+  centeredLines?: string[];
+  image?: {
     src: string;
     alt: string;
   };
@@ -14,7 +15,7 @@ type Wish = {
 const wishes: Wish[] = [
   {
     author: "திருமதி இராஜேஸ்வரி சண்முகம்",
-    role: "மார்க்கம், கனடா",
+    role: "முன்னாள் பிரதி அதிபர்",
     message: [
       "யாழ் இந்து மகளிர் கல்லூரியின் உயர்தரம் 95ஆம் ஆண்டு மாணவிகளுக்கு எனது அன்பு வணக்கம்,",
       "எமது பாடசாலைக்கு நீங்கள் ஒரு புதிய மின் வலைத்தளம் உருவாக்கியுள்ளீர்கள் என்று அறிந்து பெருமைப் படுகிறேன். உங்கள் முயற்சி மிக வெற்றிகரமாக நிறைவேற எனது ஆசிகள் உங்களுக்கு என்றும் உண்டு. இந்து மகளிர் கல்லூரி மாணவிகள் அனைவரும் இலங்கையிலும் உலகெங்கிலும் பரந்து வாழ்ந்து வருகிறீர்கள்.",
@@ -95,6 +96,18 @@ const wishes: Wish[] = [
       alt: "திருமதி மிமலாதேவி விமலநாதன்",
     },
   },
+  {
+    author: "செல்வி அ கந்தையா",
+    role: "",
+    message: [
+      "இன்று நாம் வாழும் காலம் கோபம், போட்டி, பொறாமை, சுயநலம் போன்ற பல்வேறு பட்ட மனப்போக்குடையவராக வாழ்ந்து கொண்டிருக்கும் காலமாக உள்ளது. பாடசாலைகள்,  நல்ல வகையில் கற்றற் செயற்பாடுகள், மாணாக்கரை வழிப்படுத்தல், செயற்திறன் மிக்கவராக, தூய மாணவராக மாற்றும் வகையில் அமைந்தால் மாணவர்கள் நல்லவர்களாக வளர்ந்து பெரியவராவர். அந்த வகையில் பழைய மாணவர்களது செயற்பாடுகள் பாடசாலை வளாகத்தில் நற்சிந்தனை, அர்ப்பணிப்பு என்பவற்றை வளர்த்தெடுக்கும்.",
+      "அந்த வகையில் இங்கு கற்ற, வெளிநாடுகளில் வசிக்கும் எமது பழைய மாணவிகள் பாடசாலையின்  வளர்ச்சி மாணவர்களது கல்விக்கு தேவையான அனுசரனை என்பவற்றை தம் மனதில் பதித்து, இந்து மகளிர் கல்லூரி என்ற பெயரை தம் மனதில் சுமந்து, கலை கலாச்சாரங்களை பேணி காக்கும் பொறுப்பு மிக்கவர்களாக வாழ்ந்து வருகிறார்கள். எவ்வளவு சிரமம் இருந்தாலும் தமக்கு அறிவூட்டி வாழ வைத்த தெய்வம் என நினைத்து, பழைய மாணவர் சங்கம் என்ற பெயரில் எல்லோரும் ஒன்று திரண்டு ஒரு வீட்டுப் பிள்ளைகள் போல் பாடசாலை நலனுக்காக சமயமறிந்து பெரும் சேவைகளை செய்து வருகிறார்கள். அந்த வகையில் தற்போது வலைத்தளம் அமைத்து அதனூடாக நிகழ்வுகளை உடனுக்குடன் தெரிந்து கொள்ள வேண்டும் என்ற பேராவலால் இந்த செயற்பாட்டை செய்து தருகிறார்கள்.",
+      "1995 ஆம் ஆண்டு உயர்தரம் கற்றவர்கள் இங்குள்ள மாணவர்களுடன் இணைந்து ஒற்றுமையாக இந்நிகழ்வை செய்கிறார்கள் என்று நினைக்கும் போது பெருமையாக இருப்பதோடு, இங்கு தற்போது கல்வி கற்றுக் கொண்டிருக்கும் மாணவிகள் மனதிலும் தனக்கன்றிப் பிறருக்காகவும் வாழ வேண்டும் என்ற மனப்பாங்கு ஏற்படுத்தும் என்பதில் ஐயமில்லை.",
+      "இறைவன் ஒருவரையும் தனக்காக படைக்கவில்லை. எல்லோரும் ஒன்றே என்ற நோக்கோடு வாழ்ந்து மேன்மையுறப் படைத்தார். இந்து மகளிர் கல்லூரியில் படிக்கும் மாணவிகள் அனைவரும் ஒருவரே என நினைத்து, வேண்டும் போதெல்லாம் பாடசாலை நலன் கருதி செயல்படும் திறனும் உதவும் மனப்பாங்கும் அனைத்து மாணவர் மனதிலும் பதிய வேண்டும்.",
+      "வரும் காலத்தில் பாடசாலையில் நடக்கும் அனைத்து நிகழ்வுகளையும் வலையத்தளம் ஊடாக எல்லோரும் பார்த்து ஒருவரோடு ஒருவர் தொடர்பு கொண்டு மகிழ்ந்து வாழ வழி அமைத்திருக்கும் 1995 ஆம் ஆண்டு (உயர்தரம்) பழைய மாணவிகள் அனைவருக்கும் எனது நல் ஆசிகளையும் வாழ்த்துக்களையும் தெரிவிப்பதில் பெரும் மகிழ்வடைகிறேன்.",
+    ],
+    centeredLines: ["“வாழ்க வளர்க வளம் பெறுக”", "“ஒன்று பட்டால் உண்டு வாழ்வு”"],
+  },
 ];
 
 export default function WishesPage() {
@@ -102,7 +115,9 @@ export default function WishesPage() {
     <section className="mx-auto max-w-5xl px-4 py-12">
       <h1 className="text-3xl font-bold text-green-900 text-center">Wishes from Former Principals &amp; Teachers</h1>
       <p className="mt-3 text-green-800 text-center">
-        Heartfelt messages from the leaders and educators who shaped Jaffna Hindu Ladies College.
+        This column honours the former principals whose vision, dedication, and leadership shaped the growth, values,
+        and academic excellence of our college. Their lasting contributions continue to inspire the school community
+        today.
       </p>
 
       <div className="mt-8 space-y-8">
@@ -110,7 +125,7 @@ export default function WishesPage() {
           <article key={`${wish.author}-${index}`} className="rounded-3xl border border-green-100 bg-white p-6 shadow-sm">
             <header className="text-center">
               <h2 className="text-xl font-semibold text-green-900">{wish.author}</h2>
-              <p className="text-sm text-green-700">{wish.role}</p>
+              {wish.role ? <p className="text-sm text-green-700">{wish.role}</p> : null}
             </header>
             <div className="mt-4 flex flex-col gap-4 md:flex-row md:items-start md:gap-6">
               <div className="space-y-3 text-green-900 leading-relaxed flex-1" lang="ta">
@@ -119,16 +134,23 @@ export default function WishesPage() {
                     {paragraph}
                   </p>
                 ))}
+                {wish.centeredLines?.map((line, lineIndex) => (
+                  <p key={`${index}-centered-${lineIndex}`} className="text-center">
+                    {line}
+                  </p>
+                ))}
               </div>
-              <div className="flex justify-center md:justify-end">
-                <Image
-                  src={wish.image.src}
-                  alt={wish.image.alt}
-                  width={112}
-                  height={112}
-                  className="h-28 w-28 rounded-xl border border-green-100 object-cover shadow-sm"
-                />
-              </div>
+              {wish.image ? (
+                <div className="flex justify-center md:justify-end">
+                  <Image
+                    src={wish.image.src}
+                    alt={wish.image.alt}
+                    width={112}
+                    height={112}
+                    className="h-28 w-28 rounded-xl border border-green-100 object-cover shadow-sm"
+                  />
+                </div>
+              ) : null}
             </div>
           </article>
         ))}

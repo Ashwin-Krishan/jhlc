@@ -43,7 +43,7 @@ const anthemVerses: string[][] = [
     "மருவுறு கலைகள் யாவையும் மின்பாய்",
     "வழங்கிடுங் கல்லூரி - உனைப்",
     "பெருகிடும் அன்பால் புந்தியில் வைத்துன்",
-    "புகழினை வாழ்த்ததோமோ - உனை",
+    "புகழினை வாழ்த்தோமோ - உனை",
     "வந்தே மாதரம் வந்தே மாதரம்",
     "என்று வணங்கோமோ.",
   ],
@@ -133,6 +133,7 @@ const flagshipHighlight: IdentityHighlight = {
           </audio>
           <div className="text-sm text-green-700">
             <p className="font-semibold">Listen to the college anthem</p>
+            <p>Vocals by Saarumathy Manokanthan (A/L 1995)</p>
             <Link href="/Anthem.m4a" className="text-green-800 underline underline-offset-4 hover:text-green-900">
               Download the recording
             </Link>
@@ -144,7 +145,7 @@ const flagshipHighlight: IdentityHighlight = {
 };
 
 const primarySchoolNote =
-  "The Jaffna Hindu Ladies' Primary School, established in 1978 for Grades 1–5, continues to flourish next door. Mrs. S. Wickneswara served as its first Principal; today it is led by Mrs. T. A. Thuraisingam.";
+  "The Jaffna Hindu Ladies' Primary School, established in 1978 for Grades 1–5, continues to flourish next door. Mrs. S. Wickneswara served as its first Principal; today it is led by Mrs. S. Vakeesan.";
 
 function HighlightCard({ item }: { item: IdentityHighlight }) {
   return (
@@ -216,6 +217,11 @@ export default function About() {
       <h2 className="mt-12 text-xl font-semibold text-green-800" id="principals">
         Former Principals
       </h2>
+      <p className="mt-3 text-green-800">
+        This column honours the former principals whose vision, dedication, and leadership shaped the growth, values,
+        and academic excellence of our college. Their lasting contributions continue to inspire the school community
+        today.
+      </p>
       <div className="mt-10 space-y-10">
         {principals.map((principal) => (
           <article key={principal.slug} id={principal.slug} className="scroll-mt-24 rounded-2xl border border-green-100 bg-white p-6 shadow-sm">

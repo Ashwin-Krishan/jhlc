@@ -252,7 +252,7 @@ export default function Home() {
                   <span className="font-semibold">Extracurricular Excellence:</span> Wide range of sports, cultural programs, music, arts, and student clubs nurturing talent and leadership.
                 </li>
                 <li>
-                  <span className="font-semibold">Community:</span> Currently serves [number] students with [number] dedicated staff.
+                  <span className="font-semibold">Community:</span> Currently serves 2,437 students with 119 dedicated staff.
                 </li>
               </ul>
               <Link href="/about" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-green-700 hover:text-green-900">

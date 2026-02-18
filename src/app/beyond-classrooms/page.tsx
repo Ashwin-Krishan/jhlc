@@ -42,6 +42,16 @@ const clubs: ClubProfile[] = [
     ],
   },
   {
+    name: "Robotics Club",
+    objective:
+      "To foster interest in robotics, coding, and engineering while developing teamwork and problem-solving skills through hands-on technological exploration.",
+    goals: [
+      "Provide opportunities to design, build, and program robots using modern tools and technologies.",
+      "Encourage critical thinking and creativity through robotics challenges and competitions.",
+      "Develop technical skills and collaboration to prepare students for future careers in STEM fields.",
+    ],
+  },
+  {
     name: "Commerce Union",
     objective: "To promote commercial knowledge, practical business skills, and an understanding of economic principles among students.",
     goals: [
@@ -76,6 +86,15 @@ const clubs: ClubProfile[] = [
       "Organize service projects that benefit the school and local community.",
       "Promote international understanding and goodwill through cultural exchange and awareness activities.",
       "Provide opportunities for students to build teamwork, communication, and leadership skills.",
+    ],
+  },
+  {
+    name: "Service Club",
+    objective: "To nurture compassion, social responsibility, and leadership by engaging students in meaningful community service initiatives.",
+    goals: [
+      "Promote a spirit of empathy and volunteerism through community outreach activities.",
+      "Encourage students to identify and respond to the needs of society.",
+      "Develop leadership, teamwork, and a strong sense of civic responsibility.",
     ],
   },
   {
@@ -184,6 +203,16 @@ const clubs: ClubProfile[] = [
     ],
   },
   {
+    name: "Student Cadet",
+    objective:
+      "To instill discipline, leadership, and a sense of duty while promoting physical fitness and character development among students.",
+    goals: [
+      "Build leadership qualities, confidence, and teamwork through structured training and activities.",
+      "Promote discipline, responsibility, and respect for community and nation.",
+      "Encourage physical fitness, resilience, and preparedness through drills and skill-building exercises.",
+    ],
+  },
+  {
     name: "St. John’s Ambulance",
     objective: "To equip students with first-aid skills and a spirit of service in health-related emergencies.",
     goals: [
@@ -237,25 +266,6 @@ const sports = [
   {
     title: "Badminton",
     description: "Technical skill sessions and ranking ladders hosted in the multipurpose hall.",
-  },
-];
-
-const academic = [
-  {
-    title: "Science Circle",
-    description: "Innovation labs, Olympiad coaching, and environmental research competitions.",
-  },
-  {
-    title: "English Literary Association",
-    description: "Debating, creative writing workshops, and Model UN preparations.",
-  },
-  {
-    title: "Tamil Arivuchchol",
-    description: "Oratory, poetry slam, and classical literature quizzes celebrating Tamil heritage.",
-  },
-  {
-    title: "Mathletes",
-    description: "Problem-solving leagues, coding challenges, and inter-school maths relays.",
   },
 ];
 
@@ -320,12 +330,6 @@ export default function BeyondClassrooms() {
         summary: sport.description,
       })))}
 
-      <h2 className="mt-10 text-xl font-semibold text-green-800" id="academic">Academic Competitions</h2>
-      {renderList(academic.map((item) => ({
-        id: item.title.toLowerCase().replace(/[^a-z]+/g, "-"),
-        name: item.title,
-        summary: item.description,
-      })))}
     </section>
   );
 }

@@ -24,6 +24,7 @@ const newGalleryPhotos = [
   "/NewGallery/Temple%202.jpeg",
   "/NewGallery/Temple%203.jpeg",
   "/NewGallery/Temple%204.jpeg",
+  "/images/Staff_1946.jpg",
 ];
 
 const legacyPhotos = [
