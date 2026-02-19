@@ -12,6 +12,7 @@ const navItems = [
   { label: "Staff", href: "/staff" },
   { label: "Facilities", href: "/facilities" },
   { label: "Gallery", href: "/gallery" },
+  { label: "Calendar", href: "/calendar" },
   { label: "Beyond Classrooms", href: "/beyond-classrooms" },
   { label: "Resources", href: "/resources" },
   { label: "News", href: "/news" },

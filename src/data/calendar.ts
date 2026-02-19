@@ -8,64 +8,52 @@ export type CalendarEvent = {
 
 export const calendarEvents: CalendarEvent[] = [
   {
-    date: "15 Jul",
-    title: "Term 3 Commences",
+    date: "02 Feb",
+    title: "English Day Competitions Begin",
     description:
-      "Students return for the new term with assemblies focused on goal-setting and wellbeing.",
+      "School-level English day competitions begin for students across grades.",
     category: "academic",
-    href: "/news#term-3",
   },
   {
-    date: "25 Jul",
-    title: "Founder's Tribute",
+    date: "04 Feb",
+    title: "National Independence Day",
     description:
-      "Morning puja and floral tributes at the Naduthodda Rajavarothaya Pillaiyar Temple.",
+      "National celebration and remembrance activities across the school community.",
     category: "community",
-    href: "/about#founder",
   },
   {
-    date: "02 Aug",
-    title: "Inter-House Netball",
+    date: "05 Feb",
+    title: "Staff Meeting",
     description:
-      "Senior and junior teams compete for the Founder’s Shield at the college grounds.",
-    category: "sports",
-    href: "/beyond-classrooms#sports",
+      "Faculty coordination and planning session for academic and co-curricular programs.",
+    category: "community",
   },
   {
-    date: "16 Aug",
-    title: "Science Society Exhibition",
+    date: "10 Feb",
+    title: "Special Needs List Update",
     description:
-      "Showcase of student research, robotics demos, and environmental stewardship projects.",
+      "Review and update the list of special needs students for support planning.",
     category: "academic",
-    href: "/beyond-classrooms#academic",
   },
   {
-    date: "25 Aug",
-    title: "Annual Sports Day",
+    date: "12 Feb",
+    title: "Inter House Sports Meet",
     description:
-      "Community celebration featuring marching bands, athletic meets, and cultural performances.",
+      "Students compete across houses in athletic and team events.",
     category: "sports",
-    href: "/news#sports-day",
   },
   {
-    date: "02 Oct",
-    title: "Vijayadashami Special Event",
+    date: "13 Feb",
+    title: "First Term Break",
     description:
-      "Cultural programmes, devotional music, and student performances honour the triumph of good over evil and the blessings of learning.",
+      "First term first break for students and staff.",
+    category: "academic",
+  },
+  {
+    date: "15 Feb",
+    title: "Maha Sivaratri",
+    description:
+      "Religious observance honoring Lord Shiva with devotion and prayer.",
     category: "cultural",
-  },
-  {
-    date: "08 Oct",
-    title: "Teacher’s Day Celebration",
-    description:
-      "Students express gratitude with tributes, songs, and cultural showcases celebrating the mentors who shape their journeys.",
-    category: "community",
-  },
-  {
-    date: "17 Oct",
-    title: "English Day",
-    description:
-      "Debates, drama, storytelling, and competitions in English build fluency and confidence across every grade.",
-    category: "academic",
   },
 ];
