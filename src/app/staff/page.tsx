@@ -219,18 +219,18 @@ const buildStaffEntries = (files: string[], basePath: string): StaffEntry[] => {
   return entries;
 };
 
-const academicStaffEntries = [
+const academicStaffEntries: StaffEntry[] = [
   ...buildStaffEntries(academicStaffPhotos, "/Updated%20Staff%20Photos"),
-  ...academicMissingStaff.map((entry) => ({
+  ...academicMissingStaff.map<StaffEntry>((entry) => ({
     file: `${entry.number}. ${entry.name}`,
     name: formatName(`${entry.number}. ${entry.name}`),
     number: entry.number,
   })),
 ].sort((a, b) => (a.number ?? 0) - (b.number ?? 0));
 
-const nonAcademicStaffEntries = [
+const nonAcademicStaffEntries: StaffEntry[] = [
   ...buildStaffEntries(nonAcademicStaffPhotos, "/Updated%20Staff%20Photos/Non%20academic%20staff%20"),
-  ...nonAcademicMissingStaff.map((name) => ({
+  ...nonAcademicMissingStaff.map<StaffEntry>((name) => ({
     file: name,
     name: formatName(name),
   })),
