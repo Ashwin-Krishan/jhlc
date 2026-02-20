@@ -267,6 +267,31 @@ const sports = [
     title: "Badminton",
     description: "Technical skill sessions and ranking ladders hosted in the multipurpose hall.",
   },
+  {
+    title: "Elle Team",
+    description:
+      "Elite squad focusing on discipline, teamwork, and competitive excellence across inter-school and invitational events.",
+  },
+  {
+    title: "Table Tennis",
+    description: "Skill-building drills and competitive matches that enhance reflexes, precision, and tactical play.",
+  },
+  {
+    title: "Tennis",
+    description: "Structured coaching sessions with singles and doubles practice to develop technique, stamina, and match strategy.",
+  },
+  {
+    title: "Chess",
+    description: "Strategic training sessions and tournaments that sharpen critical thinking, planning, and problem-solving skills.",
+  },
+  {
+    title: "Carrom",
+    description: "Recreational and competitive play fostering focus, accuracy, and fine motor coordination.",
+  },
+  {
+    title: "Swimming",
+    description: "Professional coaching in strokes and endurance, preparing students for meets and aquatic competitions.",
+  },
 ];
 
 type Spotlight = {

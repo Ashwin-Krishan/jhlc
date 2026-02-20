@@ -81,9 +81,9 @@ export const principals: PrincipalProfile[] = [
     years: "1946 - 1948",
     qualifications: "M.A.",
     summary:
-      "Mrs. Clara Motwani, who hailed from the United States, served as the next Principal of the college. Though educated and raised in the West, she had a deep interest in Eastern culture, languages, and religions. Married to a North Indian, she embraced Eastern customs, often wearing a saree and blouse. She strongly promoted Tamil, while also emphasizing the global significance of English. She consistently highlighted the importance of English proficiency for higher education, especially in fields like medicine and science. Her focus on both written and spoken English enabled students to become fluent, leading many to achieve prestigious positions in their careers—bringing honor and recognition to their alma mater.",
+      "Mrs. Clara Motwani, who hailed from the United States, served as the next Principal of the college. Though educated and raised in the West, she had a deep interest in Eastern culture, languages, and religions. Married to a North Indian, she embraced Eastern customs, often wearing a saree and blouse. She strongly promoted Tamil, while also emphasizing the global significance of English. She consistently highlighted the importance of English proficiency for higher education, especially in fields like medicine and science. Her focus on both written and spoken English enabled students to become fluent, leading many to achieve prestigious positions in their careers, bringing honor and recognition to their alma mater.",
     bio: [
-      "Mrs. Clara Motwani, who hailed from the United States, served as the next Principal of the college. Though educated and raised in the West, she had a deep interest in Eastern culture, languages, and religions. Married to a North Indian, she embraced Eastern customs, often wearing a saree and blouse. She strongly promoted Tamil, while also emphasizing the global significance of English. She consistently highlighted the importance of English proficiency for higher education, especially in fields like medicine and science. Her focus on both written and spoken English enabled students to become fluent, leading many to achieve prestigious positions in their careers—bringing honor and recognition to their alma mater.",
+      "Mrs. Clara Motwani, who hailed from the United States, served as the next Principal of the college. Though educated and raised in the West, she had a deep interest in Eastern culture, languages, and religions. Married to a North Indian, she embraced Eastern customs, often wearing a saree and blouse. She strongly promoted Tamil, while also emphasizing the global significance of English. She consistently highlighted the importance of English proficiency for higher education, especially in fields like medicine and science. Her focus on both written and spoken English enabled students to become fluent, leading many to achieve prestigious positions in their careers, bringing honor and recognition to their alma mater.",
       "During her tenure, she also ensured that the hostel functioned efficiently and with proper organization, which made it possible to accommodate more than 100 students. In addition, the JHLC Old Girls' Association (OGA) was founded on 1-6-1947, marking an important milestone in strengthening the bond between the college and its alumnae.",
     ],
     image: "/images/principals/jemmarani-sittampalam.png",
@@ -163,9 +163,9 @@ export const principals: PrincipalProfile[] = [
   },
   {
     slug: "vethanayaki-perinpanathan",
-    name: "Mrs. Vethanayaki Perinpanathan",
+    name: "Mrs. Vethanayaki Perinpanathan, SLEAS III",
     years: "2006 - 2012",
-    qualifications: "B.Sc., Dip. in Edu, M.A. in P.Ad., SLPS I, SLEAS III",
+    qualifications: "B.Sc., Dip. in Edu, M.A. in P.Ad., SLPS I",
     summary:
       "Mrs. V. Perinpanathan began her career at Jaffna Hindu Ladies' College in 1989 as a teacher. Through her dedication and selfless service, she steadily rose through the ranks and was promoted to Deputy Principal in 2000. On January 16, 2006, she assumed the role of Principal. Her tenure was marked by visionary leadership and an unwavering commitment to the holistic development of the institution.",
     bio: [

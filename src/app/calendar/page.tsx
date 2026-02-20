@@ -6,6 +6,7 @@ import { useMemo, useState } from "react";
 type CalendarEvent = {
   date: string;
   title: string;
+  details?: string;
 };
 
 type CalendarMonth = {
@@ -123,7 +124,8 @@ const getMonthCells = (monthIndex: number) => {
 };
 
 export default function CalendarPage() {
-  const [activeMonthIndex, setActiveMonthIndex] = useState(1);
+  const [activeMonthIndex, setActiveMonthIndex] = useState(3);
+  const [activeEvent, setActiveEvent] = useState<CalendarEvent | null>(null);
   const activeMonth = months[activeMonthIndex];
   const eventsByDate = useMemo(() => {
     const map = new Map<string, string[]>();
@@ -138,6 +140,15 @@ export default function CalendarPage() {
   const cells = useMemo(() => getMonthCells(activeMonth.monthIndex), [activeMonth.monthIndex]);
   const canGoPrev = activeMonthIndex > 0;
   const canGoNext = activeMonthIndex < months.length - 1;
+  const activeDate = activeEvent ? new Date(activeEvent.date) : null;
+  const formattedDate = activeDate
+    ? activeDate.toLocaleDateString("en-US", {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : "";
 
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
@@ -204,10 +215,15 @@ export default function CalendarPage() {
                         <div className="text-xs font-semibold text-green-900">{date.getDate()}</div>
                         <div className="mt-1 space-y-1">
                           {events.map((event) => (
-                            <div key={event} className="flex items-start gap-1 text-xs text-green-800">
+                            <button
+                              key={event}
+                              type="button"
+                              onClick={() => setActiveEvent({ date: dateKey, title: event })}
+                              className="flex w-full items-start gap-1 text-left text-xs text-green-800 transition hover:text-green-900"
+                            >
                               <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-teal-400" />
                               <span className="leading-snug">{event}</span>
-                            </div>
+                            </button>
                           ))}
                         </div>
                       </>
@@ -219,6 +235,41 @@ export default function CalendarPage() {
           </div>
         </div>
       </section>
+
+      {activeEvent ? (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 p-4">
+          <div className="w-full max-w-2xl rounded-3xl border border-rose-900/30 bg-white shadow-xl">
+            <div className="flex items-start justify-between border-b border-rose-900/20 px-6 py-5">
+              <div>
+                <h3 className="text-2xl font-semibold text-green-900">{activeEvent.title}</h3>
+                <p className="mt-2 text-sm text-green-700">{formattedDate}</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setActiveEvent(null)}
+                className="rounded-full border border-green-200 p-2 text-green-700 transition hover:bg-green-50"
+                aria-label="Close event details"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="px-6 py-5 text-green-900">
+              <p className="text-base leading-relaxed">
+                {activeEvent.details ?? "More details will be shared closer to the event."}
+              </p>
+            </div>
+            <div className="flex items-center justify-end border-t border-rose-900/20 px-6 py-4">
+              <button
+                type="button"
+                onClick={() => setActiveEvent(null)}
+                className="inline-flex items-center justify-center rounded-full border border-green-200 bg-green-50 px-4 py-2 text-sm font-semibold text-green-800 transition hover:bg-green-100"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }

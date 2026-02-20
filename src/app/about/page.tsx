@@ -26,11 +26,11 @@ const historyParagraphs = [
 const identityHighlights: IdentityHighlight[] = [
   {
     title: "Motto",
-    description: "“It ought to be beautiful, I live here.” Our motto reflects our belief that education is not only about acquiring knowledge but also about creating beauty — in thought, action, and community. Each student is encouraged to make her environment, and the world she lives in, more meaningful and beautiful through her deeds.",
+    description: "“It ought to be beautiful, I live here.” Our motto reflects our belief that education is not only about acquiring knowledge but also about creating beauty in thought, action, and community. Each student is encouraged to make her environment, and the world she lives in, more meaningful and beautiful through her deeds.",
   },
   {
     title: "College Colours",
-    description: "The green and white palette represents growth, resilience, and the radiance of learning — echoed in the flag and tie introduced in the 1950s.",
+    description: "The green and white palette represents growth, resilience, and the radiance of learning, echoed in the flag and tie introduced in the 1950s.",
   },
 ];
 
