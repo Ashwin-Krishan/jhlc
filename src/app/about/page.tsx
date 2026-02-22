@@ -182,6 +182,21 @@ function HighlightCard({ item }: { item: IdentityHighlight }) {
 }
 
 export default function About() {
+  const getOneLiner = (summary: string, bio: string[]) => {
+    const source = summary || bio[0] || "";
+    if (!source) return "";
+    const clean = source.replace(/\s+/g, " ").trim();
+    if (clean.length <= 160 && clean.length >= 20) return clean;
+    const truncated = clean.slice(0, 157);
+    const lastSpace = truncated.lastIndexOf(" ");
+    const candidate = `${(lastSpace > 60 ? truncated.slice(0, lastSpace) : truncated).trim()}...`;
+    if (candidate.length < 20 && bio[0]) {
+      const fallback = bio[0].replace(/\s+/g, " ").trim();
+      return fallback.length > 160 ? `${fallback.slice(0, 157).trim()}...` : fallback;
+    }
+    return candidate;
+  };
+
   return (
     <section className="max-w-4xl mx-auto px-4 py-12">
       <div className="flex flex-col items-center gap-8 text-center">
@@ -222,41 +237,33 @@ export default function About() {
         and academic excellence of our college. Their lasting contributions continue to inspire the school community
         today.
       </p>
-      <div className="mt-10 space-y-10">
+      <div className="mt-8 grid gap-6 md:grid-cols-2">
         {principals.map((principal) => (
           <article key={principal.slug} id={principal.slug} className="scroll-mt-24 rounded-2xl border border-green-100 bg-white p-6 shadow-sm">
-            <div className="flex flex-col gap-6 md:flex-row">
+            <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               {principal.image ? (
-                <div className="mx-auto flex-shrink-0 md:mx-0">
+                <div className="mx-auto flex-shrink-0 sm:mx-0">
                   <Image
                     src={principal.image}
                     alt={`Portrait of ${principal.name}`}
-                    width={180}
-                    height={220}
-                    className="h-56 w-40 rounded-2xl border border-green-100 object-cover shadow-sm"
+                    width={140}
+                    height={180}
+                    className="h-44 w-32 rounded-2xl border border-green-100 object-cover shadow-sm"
                   />
                 </div>
               ) : null}
               <div className="flex-1">
-                <header className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold text-green-900">{principal.name}</h3>
-                    <p className="text-sm uppercase tracking-wide text-green-600">{principal.years}</p>
-                  </div>
-                  {principal.qualifications ? (
-                    <p className="text-sm font-medium text-green-700 md:text-right">{principal.qualifications}</p>
-                  ) : null}
-                </header>
-                <div className="mt-4 space-y-3 text-green-800">
-                  {principal.bio.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-                <div className="mt-5 text-right text-xs">
-                  <Link href="#principals" className="text-green-600 hover:text-green-800">
-                    Back to list ↑
-                  </Link>
-                </div>
+                <h3 className="text-xl font-semibold text-green-900">{principal.name}</h3>
+                <p className="mt-1 text-sm uppercase tracking-wide text-green-600">{principal.years}</p>
+                <p className="mt-3 text-sm text-green-800">
+                  {getOneLiner(principal.summary, principal.bio)}
+                </p>
+                <Link
+                  href={`/principals/${principal.slug}`}
+                  className="mt-4 inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-4 py-2 text-sm font-semibold text-green-800 shadow-sm transition hover:bg-green-100"
+                >
+                  Read more <span aria-hidden>→</span>
+                </Link>
               </div>
             </div>
           </article>

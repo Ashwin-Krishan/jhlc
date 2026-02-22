@@ -1,5 +1,8 @@
 import type { MetadataRoute } from "next";
 
+import { principals } from "@/data/principals";
+import { allBeyondItems } from "@/data/beyondClassrooms";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = "https://jhlc.vercel.app";
   return [
@@ -14,5 +17,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/resources`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
     { url: `${base}/news`, lastModified: new Date(), changeFrequency: "weekly", priority: 0.6 },
     { url: `${base}/contact`, lastModified: new Date(), changeFrequency: "monthly", priority: 0.6 },
+    ...principals.map((principal) => ({
+      url: `${base}/principals/${principal.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
+    ...allBeyondItems.map((item) => ({
+      url: `${base}/beyond-classrooms/${item.slug}`,
+      lastModified: new Date(),
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    })),
   ];
 }
