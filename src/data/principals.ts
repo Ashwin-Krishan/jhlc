@@ -163,9 +163,9 @@ export const principals: PrincipalProfile[] = [
   },
   {
     slug: "vethanayaki-perinpanathan",
-    name: "Mrs. Vethanayaki Perinpanathan, SLEAS III",
+    name: "Mrs. Vethanayaki Perinpanathan",
     years: "2006 - 2012",
-    qualifications: "B.Sc., Dip. in Edu, M.A. in P.Ad., SLPS I",
+    qualifications: "B.Sc., Dip. in Edu, M.A. in P.Ad., SLPS I, SLEAS III",
     summary:
       "Mrs. V. Perinpanathan began her career at Jaffna Hindu Ladies' College in 1989 as a teacher. Through her dedication and selfless service, she steadily rose through the ranks and was promoted to Deputy Principal in 2000. On January 16, 2006, she assumed the role of Principal. Her tenure was marked by visionary leadership and an unwavering commitment to the holistic development of the institution.",
     bio: [

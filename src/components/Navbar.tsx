@@ -5,11 +5,18 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const navItems = [
+type NavItem = {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+};
+
+const navItems: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "History", href: "/history" },
-  { label: "Staff", href: "/staff" },
+  { label: "Academic Staff", href: "/staff/academic" },
+  { label: "Non Academic Staff", href: "/staff/non-academic" },
   { label: "Facilities", href: "/facilities" },
   { label: "Gallery", href: "/gallery" },
   { label: "Calendar", href: "/calendar" },
@@ -95,6 +102,21 @@ export default function Navbar() {
                 {item.label}
                 <span aria-hidden>→</span>
               </Link>
+              {item.children ? (
+                <ul className="mt-1 space-y-1 pl-4">
+                  {item.children.map((child) => (
+                    <li key={child.href}>
+                      <Link
+                        href={child.href}
+                        className="flex w-full items-center justify-between rounded-lg px-3 py-2 text-xs font-medium text-green-700 transition hover:bg-green-50 hover:text-green-900"
+                      >
+                        {child.label}
+                        <span aria-hidden>↳</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : null}
             </li>
           ))}
         </ul>

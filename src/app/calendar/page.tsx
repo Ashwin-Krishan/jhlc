@@ -159,37 +159,34 @@ export default function CalendarPage() {
       </div>
 
       <section className="mt-10 space-y-4">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <h2 className="text-2xl font-semibold text-green-900">{activeMonth.name}</h2>
-            <p className="text-sm text-green-700">Use the arrows to navigate months.</p>
-          </div>
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => setActiveMonthIndex((prev) => Math.max(0, prev - 1))}
-              disabled={!canGoPrev}
-              className={`inline-flex items-center justify-center rounded-full border px-4 py-2 text-sm font-semibold transition ${
-                canGoPrev
-                  ? "border-green-200 bg-white text-green-700 hover:bg-green-50"
-                  : "cursor-not-allowed border-gray-200 bg-gray-50 text-gray-400"
-              }`}
-            >
-              ← Prev
-            </button>
-            <button
-              type="button"
-              onClick={() => setActiveMonthIndex((prev) => Math.min(months.length - 1, prev + 1))}
-              disabled={!canGoNext}
-              className={`inline-flex items-center justify-center rounded-full border px-4 py-2 text-sm font-semibold transition ${
-                canGoNext
-                  ? "border-green-200 bg-white text-green-700 hover:bg-green-50"
-                  : "cursor-not-allowed border-gray-200 bg-gray-50 text-gray-400"
-              }`}
-            >
-              Next →
-            </button>
-          </div>
+        <div className="flex items-center justify-center gap-3">
+          <button
+            type="button"
+            onClick={() => setActiveMonthIndex((prev) => Math.max(0, prev - 1))}
+            disabled={!canGoPrev}
+            className={`inline-flex h-8 w-8 items-center justify-center rounded-full border text-sm font-semibold transition ${
+              canGoPrev
+                ? "border-green-200 bg-white text-green-700 hover:bg-green-50"
+                : "cursor-not-allowed border-gray-200 bg-gray-50 text-gray-400"
+            }`}
+            aria-label="Previous month"
+          >
+            ←
+          </button>
+          <h2 className="text-2xl font-semibold text-center text-green-900">{activeMonth.name}</h2>
+          <button
+            type="button"
+            onClick={() => setActiveMonthIndex((prev) => Math.min(months.length - 1, prev + 1))}
+            disabled={!canGoNext}
+            className={`inline-flex h-8 w-8 items-center justify-center rounded-full border text-sm font-semibold transition ${
+              canGoNext
+                ? "border-green-200 bg-white text-green-700 hover:bg-green-50"
+                : "cursor-not-allowed border-gray-200 bg-gray-50 text-gray-400"
+            }`}
+            aria-label="Next month"
+          >
+            →
+          </button>
         </div>
 
         <div className="overflow-x-auto rounded-3xl border border-rose-900/30 bg-white p-4 shadow-sm">

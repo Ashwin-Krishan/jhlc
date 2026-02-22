@@ -1,6 +1,4 @@
-import Image from "next/image";
-
-type StaffEntry = {
+export type StaffEntry = {
   file: string;
   name: string;
   roleTag?: string;
@@ -52,7 +50,7 @@ const academicStaffPhotos = [
   "49. MRS.MOHANA QUINTUS JEEVAN.JPG",
   "50. MR.VALLIPURAM AINKARAN.JPG",
   "52. MISS.JEYANTHI SHAKTHIVEL.JPG",
-  "53. MRS.KOSALAGINI SUHEETHAN2.JPG",
+  "53. MRS.KOSALAGINI SUHEETHAN.JPG",
   "54. MRS.SUBASINI MAYURAN.JPG",
   "57. MRS. NISHANTHINI ATHEETHAN.JPG",
   "58. MR.SELLAIYAH THAJEETHARAN.JPG",
@@ -89,7 +87,6 @@ const academicStaffPhotos = [
   "101. MRS.THARANI VASUTHEESAN.JPG",
   "102. MS.GNANATHARSHINI THIYAGARASA.JPG",
   "104. MRS.BABITHA SANJEEVAN.JPG",
-  "105. MRS.PRABALINI CHANDRAPRAKASH.JPG",
   "106. MRS.NIXSALA NITHARSAN.JPG",
   "107. MRS.THEVAKI SUTHAKARAN.JPG",
   "108. MRS.ANOJAH MOHANAKRISHNAR.JPG",
@@ -133,7 +130,6 @@ const academicMissingStaff = [
   { number: 92, name: "MRS.SOBANA SRIJEYABHAVAN" },
   { number: 97, name: "MRS.SIVATHARSINI KEETHAMPARAN" },
   { number: 103, name: "MRS.PRIYENGAH UBENTHIRAN" },
-  { number: 105, name: "MRS.PRABALINI CHANDRAPRAKASH" },
   { number: 113, name: "MR.RAGUNATHAN UMAPATHY" },
   { number: 114, name: "MR.PONNAMPALAM SATKUNASEELAN" },
   { number: 115, name: "MRS.GAYATHIRI LAGUTHAS" },
@@ -186,7 +182,7 @@ const parseNumber = (raw: string) => {
   return match ? Number(match[1]) : undefined;
 };
 
-const getInitials = (name: string) => {
+export const getInitials = (name: string) => {
   const words = name
     .replace(/\./g, "")
     .split(" ")
@@ -219,7 +215,7 @@ const buildStaffEntries = (files: string[], basePath: string): StaffEntry[] => {
   return entries;
 };
 
-const academicStaffEntries: StaffEntry[] = [
+export const academicStaffEntries: StaffEntry[] = [
   ...buildStaffEntries(academicStaffPhotos, "/Updated%20Staff%20Photos"),
   ...academicMissingStaff.map<StaffEntry>((entry) => ({
     file: `${entry.number}. ${entry.name}`,
@@ -228,88 +224,10 @@ const academicStaffEntries: StaffEntry[] = [
   })),
 ].sort((a, b) => (a.number ?? 0) - (b.number ?? 0));
 
-const nonAcademicStaffEntries: StaffEntry[] = [
+export const nonAcademicStaffEntries: StaffEntry[] = [
   ...buildStaffEntries(nonAcademicStaffPhotos, "/Updated%20Staff%20Photos/Non%20academic%20staff%20"),
   ...nonAcademicMissingStaff.map<StaffEntry>((name) => ({
     file: name,
     name: formatName(name),
   })),
 ];
-
-export default function Staff() {
-  return (
-    <section className="max-w-5xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-green-900 mb-6">Staff Directory</h1>
-
-      <h2 className="mt-8 text-xl font-semibold text-green-800" id="academic-staff">Academic Staff</h2>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {academicStaffEntries.map((staff) => (
-          <div key={staff.name} className="flex flex-col items-center gap-3 rounded-2xl border border-green-100 bg-white p-4 text-center text-green-900 shadow-sm">
-            <div className="relative h-32 w-32 overflow-hidden rounded-full border border-green-100 bg-green-50 shadow-sm">
-              {staff.src ? (
-                <Image
-                  src={staff.src}
-                  alt={staff.name}
-                  fill
-                  sizes="128px"
-                  className="object-cover"
-                />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-lg font-semibold text-green-700">
-                  {getInitials(staff.name)}
-                </div>
-              )}
-            </div>
-            <div>
-              <p className="text-lg font-semibold text-green-900">{staff.name}</p>
-              {staff.roleTag ? (
-                <span className="mt-1 inline-block rounded-full bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-700">
-                  {staff.roleTag}
-                </span>
-              ) : null}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <h2 className="mt-12 text-xl font-semibold text-green-800" id="non-academic-staff">Non Academic Staff</h2>
-      <div className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {nonAcademicStaffEntries.map((staff) => (
-          <div key={staff.name} className="flex flex-col items-center gap-3 rounded-2xl border border-green-100 bg-white p-4 text-center text-green-900 shadow-sm">
-            <div className="relative h-32 w-32 overflow-hidden rounded-full border border-green-100 bg-green-50 shadow-sm">
-              {staff.src ? (
-                <Image
-                  src={staff.src}
-                  alt={staff.name}
-                  fill
-                  sizes="128px"
-                  className="object-cover"
-                />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-lg font-semibold text-green-700">
-                  {getInitials(staff.name)}
-                </div>
-              )}
-            </div>
-            <div>
-              <p className="text-lg font-semibold text-green-900">{staff.name}</p>
-              {staff.roleTag ? (
-                <span className="mt-1 inline-block rounded-full bg-green-50 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-green-700">
-                  {staff.roleTag}
-                </span>
-              ) : null}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="mt-12 rounded-3xl border border-green-100 bg-green-50 p-5 text-sm text-green-700">
-        <p className="font-semibold">Directory updates</p>
-        <p className="mt-2">
-          Photographs are sourced from the official directory folder. If a name needs correction, please email{" "}
-          <a href="mailto:office@jhindu.lk" className="text-green-700 hover:text-green-900">office@jhindu.lk</a>.
-        </p>
-      </div>
-    </section>
-  );
-}

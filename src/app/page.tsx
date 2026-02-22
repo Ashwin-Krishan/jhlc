@@ -222,7 +222,7 @@ export default function Home() {
                 {principalParagraphs.map(({ language, paragraph, isFirstInSection }, index) => (
                   <p
                     key={`principal-paragraph-${index}`}
-                    className={`text-base leading-relaxed ${
+                    className={`text-[15px] leading-relaxed ${
                       language === "en" ? "font-semibold italic text-green-700" : "text-green-800"
                     } ${isFirstInSection && language === "ta" ? "font-semibold" : ""}`.trim()}
                     lang={language === "ta" ? "ta" : "en"}
