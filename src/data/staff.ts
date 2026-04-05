@@ -87,6 +87,7 @@ const academicStaffPhotos = [
   "101. MRS.THARANI VASUTHEESAN.JPG",
   "102. MS.GNANATHARSHINI THIYAGARASA.JPG",
   "104. MRS.BABITHA SANJEEVAN.JPG",
+  "105. MRS. PRABALINI CHA DRAPRAKASH.jpeg",
   "106. MRS.NIXSALA NITHARSAN.JPG",
   "107. MRS.THEVAKI SUTHAKARAN.JPG",
   "108. MRS.ANOJAH MOHANAKRISHNAR.JPG",
@@ -230,4 +231,8 @@ export const nonAcademicStaffEntries: StaffEntry[] = [
     file: name,
     name: formatName(name),
   })),
-];
+].map((entry) =>
+  entry.name === "Mrs. Gayathri Selvakabilan"
+    ? { ...entry, name: "Mrs. Kayathri Selvakabilan" }
+    : entry
+);

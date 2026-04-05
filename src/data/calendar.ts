@@ -8,52 +8,45 @@ export type CalendarEvent = {
 
 export const calendarEvents: CalendarEvent[] = [
   {
-    date: "02 Feb",
-    title: "English Day Competitions Begin",
-    description:
-      "School-level English day competitions begin for students across grades.",
+    date: "10 Apr",
+    title: "First Term - Second Break",
+    description: "Second break of the first term for students and staff.",
     category: "academic",
   },
   {
-    date: "04 Feb",
-    title: "National Independence Day",
-    description:
-      "National celebration and remembrance activities across the school community.",
-    category: "community",
+    date: "14 Apr",
+    title: "New Year",
+    description: "Tamil and Sinhala New Year celebration and public holiday.",
+    category: "cultural",
   },
   {
-    date: "05 Feb",
-    title: "Staff Meeting",
-    description:
-      "Faculty coordination and planning session for academic and co-curricular programs.",
-    category: "community",
-  },
-  {
-    date: "10 Feb",
-    title: "Special Needs List Update",
-    description:
-      "Review and update the list of special needs students for support planning.",
+    date: "20 Apr",
+    title: "Second Term Begins",
+    description: "Start of the second term for the 2026 academic year.",
     category: "academic",
   },
   {
-    date: "12 Feb",
-    title: "Inter House Sports Meet",
-    description:
-      "Students compete across houses in athletic and team events.",
+    date: "24 Apr",
+    title: "Advanced Level Students Social",
+    description: "Social gathering for Advanced Level students across the school.",
+    category: "community",
+  },
+  {
+    date: "25 Apr",
+    title: "Chess Tournament - Day 1",
+    description: "Inter-school chess tournament commences.",
     category: "sports",
   },
   {
-    date: "13 Feb",
-    title: "First Term Break",
-    description:
-      "First term first break for students and staff.",
-    category: "academic",
+    date: "26 Apr",
+    title: "Chess Tournament - Day 2",
+    description: "Continuation of the inter-school chess tournament.",
+    category: "sports",
   },
   {
-    date: "15 Feb",
-    title: "Maha Sivaratri",
-    description:
-      "Religious observance honoring Lord Shiva with devotion and prayer.",
-    category: "cultural",
+    date: "30 Apr",
+    title: "Staff Meeting",
+    description: "Faculty coordination and planning session for academic and co-curricular programs.",
+    category: "community",
   },
 ];

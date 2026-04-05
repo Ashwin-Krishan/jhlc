@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import FacilityCarousel from "@/components/FacilityCarousel";
+
 type Facility = {
   name: string;
   image: string;
@@ -64,6 +66,9 @@ export default function Facilities() {
   return (
     <section className="max-w-5xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-bold text-green-900 mb-8 text-center">JHLC Facilities</h1>
+      <div className="mb-10">
+        <FacilityCarousel />
+      </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {facilities.map((facility) => (
           <div key={facility.name} className="bg-green-50 border border-green-100 rounded-xl p-4 flex flex-col items-center shadow">
