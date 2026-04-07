@@ -8,35 +8,35 @@ export type BulletinItem = {
 
 export const bulletinItems: BulletinItem[] = [
   {
-    id: "national-dance-drama-2025",
-    title: "National Dance Drama Champions",
+    id: "new-year-wish-2026",
+    title: "Happy New Year 2026!",
     excerpt:
-      "21.09.2025 — JHLC secured first place at the National Level Dance Drama Competition with a spellbinding performance by the senior cultural troupe.",
-    href: "/news#national-dance-drama-2025",
-    cta: "Celebrate the victory",
+      "Wishing all students, staff, parents, and the entire JHLC family a joyful and prosperous New Year. May the year ahead bring success, health, and happiness to all.",
+    href: "/news#new-year-wish-2026",
+    cta: "Read the message",
   },
   {
-    id: "term-3",
-    title: "Term 3 Readiness Week",
+    id: "al-results-2025",
+    title: "Outstanding G.C.E. (A/L) 2025 Results",
     excerpt:
-      "Orientation sessions for new students, subject selection clinics, and mentoring circles with alumnae.",
-    href: "/news#term-3",
-    cta: "Read schedule",
+      "01.04.2026 — JHLC celebrates exceptional A/L results: 9 students achieved 3As, 18 achieved 2As, and 16 achieved A with 2Bs. 305 out of 421 students (72.45%) qualified for university entrance.",
+    href: "/news#al-results-2025",
+    cta: "View full results",
   },
   {
-    id: "sports-day",
-    title: "Annual Sports Day Volunteers",
+    id: "al-social-2026",
+    title: "Upcoming A/L Social",
     excerpt:
-      "Parents and Old Girls can register online to support logistics, judging panels, and hospitality tents.",
-    href: "/news#sports-day",
-    cta: "Sign up",
+      "A special social gathering is being organised for Advanced Level students. Stay tuned for date and venue details. All A/L students are encouraged to participate.",
+    href: "/news#al-social-2026",
+    cta: "More details",
   },
   {
-    id: "scholarships",
-    title: "STEM Scholarship Applications Open",
+    id: "badminton-east-eagle-smashes-2025",
+    title: "Badminton Achievements — MSR's East Eagle Smashes (UK)",
     excerpt:
-      "Advanced Level students can now apply for the Visaladchy STEM grants in partnership with OGA chapters.",
-    href: "/news#stem-scholarships",
-    cta: "Apply today",
+      "JHLC students excelled at MSR's East Eagle Smashes (UK) tournament: U-17 Singles Champion M.Harishna, U-19 Singles Champion P.Priyakavi, and multiple champions & finalists across all age categories.",
+    href: "/news#badminton-east-eagle-smashes-2025",
+    cta: "See all results",
   },
 ];
