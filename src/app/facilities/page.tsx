@@ -1,10 +1,7 @@
-import Image from "next/image";
-
 import FacilityCarousel from "@/components/FacilityCarousel";
 
 type Facility = {
   name: string;
-  image: string;
   description: string;
   details?: string[];
 };
@@ -13,31 +10,26 @@ type Facility = {
 const facilities: Facility[] = [
   {
     name: "Library",
-    image: "/images/library.jpg",
     description:
       "A calm, vibrant hub with textbooks, references, storybooks, journals, and digital resources that nurture curiosity and independent learning.",
   },
   {
     name: "Sports Complex",
-    image: "/NewGallery/Badminton.jpg",
     description:
       "Netball and basketball courts, table tennis, cricket grounds, and track-and-field spaces that promote discipline, teamwork, and lifelong fitness.",
   },
   {
     name: "Visaladchi Mandapam",
-    image: "/NewGallery/Auditorium.jpg",
     description:
       "Our modern auditorium for assemblies, cultural showcases, debates, competitions, and milestone celebrations with professional seating and acoustics.",
   },
   {
     name: "Rajavarothayar Temple",
-    image: "/NewGallery/temple.jpg",
     description:
       "A serene sanctuary where daily prayers and observances deepen the college's cultural roots and encourage reflection, respect, and harmony.",
   },
   {
     name: "Science Laboratories",
-    image: "/NewGallery/CompLab2.jpg",
     description:
       "Hands-on spaces that support experimentation and discovery across the life and physical sciences for every stage of study.",
     details: [
@@ -50,13 +42,11 @@ const facilities: Facility[] = [
   },
   {
     name: "Technology Laboratories",
-    image: "/NewGallery/CompLab2.jpg",
     description:
       "ICT suites with modern computers, digital learning tools, and collaborative workstations that foster coding, design thinking, and real-world problem solving.",
   },
   {
     name: "Co-operative Distribution Centre",
-    image: "/images/canteen.jpg",
     description:
       "Serving the community since 1951 with affordable food, uniforms, and classroom essentials, reinvesting proceeds to enhance school facilities.",
   },
@@ -72,13 +62,6 @@ export default function Facilities() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {facilities.map((facility) => (
           <div key={facility.name} className="bg-green-50 border border-green-100 rounded-xl p-4 flex flex-col items-center shadow">
-            <Image
-              src={facility.image}
-              alt={facility.name}
-              width={180}
-              height={120}
-              className="rounded-xl mb-2 object-cover"
-            />
             <h2 className="font-semibold text-lg text-green-800">{facility.name}</h2>
             <p className="text-sm text-green-900 mt-2 text-center">{facility.description}</p>
             {(() => {
