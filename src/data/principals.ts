@@ -42,7 +42,7 @@ export const principals: PrincipalProfile[] = [
     years: "1943 - 1944",
     qualifications: "B.Sc. (Hons.), Eng. Trained 1st Class",
     summary:
-      "Miss Gayathiri Ponnuththurai was the first permanent Principal of Jaffna Hindu Ladies’ College. She was known for her strict discipline and firm approach toward students, placing strong emphasis on their appearance, attire, and conduct. Energetic and dynamic, she proved highly effective in her leadership. She also showed great respect for her colleagues and engaged in thoughtful discussions with them regarding the future development of the college whenever necessary.",
+      "Miss Gayathiri Ponnuththurai was the first permanent Principal of Jaffna Hindu Ladies' College. She was known for her strict discipline and firm approach toward students, placing strong emphasis on their appearance, attire, and conduct. Energetic and dynamic, she proved highly effective in her leadership. She also showed great respect for her colleagues and engaged in thoughtful discussions with them regarding the future development of the college whenever necessary.",
     image: "/images/principals/gayathiri-ponnuththurai.png",
   },
   {
@@ -61,7 +61,6 @@ export const principals: PrincipalProfile[] = [
     qualifications: "B.A.",
     summary:
       "Mrs. Jemmarani Sittampalam, served the college for a brief period. However, her captivating English Literature classes left a lasting impression, and she is fondly remembered at the college for the impact of her teaching.",
-    image: "/images/gallery1.jpg",
   },
   {
     slug: "clara-motwani",
@@ -70,7 +69,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "M.A.",
     summary:
       "Mrs. Clara Motwani, who hailed from the United States, served as the next Principal of the college. Though educated and raised in the West, she had a deep interest in Eastern culture, languages, and religions. Married to a North Indian, she embraced Eastern customs, often wearing a saree and blouse. She strongly promoted Tamil, while also emphasizing the global significance of English. She consistently highlighted the importance of English proficiency for higher education, especially in fields like medicine and science. Her focus on both written and spoken English enabled students to become fluent, leading many to achieve prestigious positions in their careers, bringing honor and recognition to their alma mater. During her tenure, she also ensured that the hostel functioned efficiently and with proper organization, which made it possible to accommodate more than 100 students. In addition, the JHLC Old Girls' Association (OGA) was founded on 1-6-1947, marking an important milestone in strengthening the bond between the college and its alumnae.",
-    image: "/images/principals/clara-motwani.png",
+    image: "/images/principals/clarausa.png",
   },
   {
     slug: "sarojini-rao",
@@ -79,7 +78,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "M.A., L.T.",
     summary:
       "The energetic young educator from India, Mrs. Rao, was a striking and memorable presence at the college. She was often seen walking throughout the school grounds, engaging with students with a whistle around her neck. Its sound became a familiar signal to both students and teachers of that era. Soon after assuming her responsibilities at Jaffna Hindu Ladies' College, she helped shape the institutional identity by selecting the school colours, green and white, and guiding the development of the college emblem, motto, and anthem.\n\nMrs. Rao greatly expanded academic and co-curricular opportunities, ensuring students had access to Tamil, English, Science, the Arts, and newly introduced external courses. She also introduced skill-based training such as handicraft, weaving, and sewing, along with fine arts subjects, thereby broadening the scope of holistic education. Recognizing the importance of scientific learning, she oversaw the establishment of a science laboratory and took a hands-on role in the construction of several new buildings and the protective boundary wall, which was built using funds collected from the 1954 carnival and lottery organized by the Board of Management.\n\nTo promote physical education and healthy competition, she formed school houses and initiated inter-house meets. She also encouraged literary and creative expression by launching the school's annual magazine, Sakthi.\n\nUnder her dynamic leadership, the college was upgraded to a Grade II institution with an enrollment of over 1,100 students, and university entrance classes were introduced. Her teaching of Health and Home Science followed the traditional Guru-Pupil model, offering students a fresh and inspiring educational experience. Through the introduction of the college motto, \"It ought to be beautiful, I live here,\" she instilled in students a deep sense of pride, discipline, and respect for their school.",
-    image: "/images/principals/sarojini-rao.png",
+    image: "/images/principals/clara-motwani.png",
   },
   {
     slug: "vimala-arumugam",
@@ -88,7 +87,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "B.A. (Madras)",
     summary:
       "Mrs. Vimala Arumugam, who rose through the ranks from teacher to Principal, holds the distinction of being the longest-serving principal of Jaffna Hindu Ladies' College. Her deep dedication to the institution was evident-she was truly devoted to its growth and progress. Under her leadership, the college was elevated to Grade I status, and a significant number of students gained admission to the University of Peradeniya.",
-    image: "/images/principals/vimala-arumugam.png",
+    image: "/images/principals/sarojini-rao.png",
   },
   {
     slug: "pathmawathy-ramanathan",
@@ -97,7 +96,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "B.A. (Hons.), Annamalai",
     summary:
       "Miss Ramanathan was yet another remarkable figure who served our college as a Teacher, Vice Principal, and eventually Principal. She began her career as a young teacher in 1950 and steadily rose through the ranks. Known for her strict discipline and leading by example, she earned the respect of students and staff alike. Her unwavering devotion and dedication greatly contributed to the comprehensive development of the college.",
-    image: "/images/principals/pathmawathy-ramanathan.png",
+    image: "/images/principals/vimala-arumugam.png",
   },
   {
     slug: "thivyasironmany-nagarajah",
@@ -106,7 +105,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "B.Sc. (Madras)",
     summary:
       "Mrs. Nagarajah was appointed Principal after serving as a teacher at the college from 1977 to 1986. During her leadership from 1986 to 1993, the student population exceeded 2,000. The college extended its support to displaced students from Pungudutivu by providing them with accommodation. Two bicycle sheds were constructed, and a beautiful flower garden was developed on the campus.",
-    image: "/images/principals/thivyasironmany-nagarajah.png",
+    image: "/images/principals/pathmawathy-ramanathan.png",
   },
   {
     slug: "saraswathy-jeyarajah",
@@ -115,7 +114,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "B.A. (Hons.), Dip. in Ed., S.L.P.S. I",
     summary:
       "Mrs. Jeyarajah assumed the role of Principal at Jaffna Hindu Ladies' College on 21st October 1993, after serving at the University of Peradeniya and the University of Jaffna, as the Elalai Cluster Principal, and also with the Education Department in Jaffna. Under her leadership, students achieved excellence in both academics and extracurricular activities. Her strong focus on Science and Medicine led to an increase in university admissions, particularly in Medical and Engineering faculties.",
-    image: "/images/principals/saraswathy-jeyarajah.png",
+    image: "/images/principals/thivyasironmany-nagarajah.png",
   },
   {
     slug: "vethanayaki-perinpanathan",
