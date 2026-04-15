@@ -182,19 +182,13 @@ function HighlightCard({ item }: { item: IdentityHighlight }) {
 }
 
 export default function About() {
-  const getOneLiner = (summary: string, bio: string[]) => {
-    const source = summary || bio[0] || "";
-    if (!source) return "";
-    const clean = source.replace(/\s+/g, " ").trim();
-    if (clean.length <= 160 && clean.length >= 20) return clean;
+  const getOneLiner = (summary: string) => {
+    if (!summary) return "";
+    const clean = summary.replace(/\s+/g, " ").trim();
+    if (clean.length <= 160) return clean;
     const truncated = clean.slice(0, 157);
     const lastSpace = truncated.lastIndexOf(" ");
-    const candidate = `${(lastSpace > 60 ? truncated.slice(0, lastSpace) : truncated).trim()}...`;
-    if (candidate.length < 20 && bio[0]) {
-      const fallback = bio[0].replace(/\s+/g, " ").trim();
-      return fallback.length > 160 ? `${fallback.slice(0, 157).trim()}...` : fallback;
-    }
-    return candidate;
+    return `${(lastSpace > 60 ? truncated.slice(0, lastSpace) : truncated).trim()}...`;
   };
 
   return (
@@ -256,7 +250,7 @@ export default function About() {
                 <h3 className="text-xl font-semibold text-green-900">{principal.name}</h3>
                 <p className="mt-1 text-sm uppercase tracking-wide text-green-600">{principal.years}</p>
                 <p className="mt-3 text-sm text-green-800">
-                  {getOneLiner(principal.summary, principal.bio)}
+                  {getOneLiner(principal.summary)}
                 </p>
                 <Link
                   href={`/principals/${principal.slug}`}
