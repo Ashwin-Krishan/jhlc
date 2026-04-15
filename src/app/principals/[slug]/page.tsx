@@ -77,11 +77,7 @@ export default async function PrincipalPage({ params }: PrincipalPageProps) {
             <p className="mt-4 text-green-800">{principal.summary}</p>
           </div>
         </div>
-        <div className="mt-6 space-y-4 text-green-800">
-          {principal.bio.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
+
       </div>
     </section>
   );
