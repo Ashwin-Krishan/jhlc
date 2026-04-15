@@ -61,7 +61,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "B.A.",
     summary:
       "Mrs. Jemmarani Sittampalam, served the college for a brief period. However, her captivating English Literature classes left a lasting impression, and she is fondly remembered at the college for the impact of her teaching.",
-    image: "/images/principals/jemmarani-sittampalam.png",
+    image: "/images/gallery1.jpg",
   },
   {
     slug: "clara-motwani",

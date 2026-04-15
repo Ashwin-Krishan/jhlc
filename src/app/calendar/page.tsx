@@ -97,6 +97,64 @@ const months: CalendarMonth[] = [
       { date: "2026-06-26", title: "Anti-drug Day" },
     ],
   },
+  {
+    name: "July",
+    monthIndex: 6,
+    events: [
+      { date: "2026-07-13", title: "Second term examinations begin" },
+      { date: "2026-07-22", title: "Suntharamoorthy nayanar guru pooja" },
+      { date: "2026-07-23", title: "Staff meeting" },
+      { date: "2026-07-24", title: "Second term break" },
+      { date: "2026-07-27", title: "Third term - first phase begins" },
+    ],
+  },
+  {
+    name: "August",
+    monthIndex: 7,
+    events: [
+      { date: "2026-08-05", title: "ICT Day" },
+      { date: "2026-08-07", title: "Third term - first break" },
+    ],
+  },
+  {
+    name: "September",
+    monthIndex: 8,
+    events: [
+      { date: "2026-09-07", title: "Third term - second phase begins" },
+      { date: "2026-09-10", title: "School Founder's Day and Prize giving Day" },
+      { date: "2026-09-24", title: "Staff meeting" },
+      { date: "2026-09-29", title: "English Day" },
+    ],
+  },
+  {
+    name: "October",
+    monthIndex: 9,
+    events: [
+      { date: "2026-10-01", title: "World Children's Day" },
+      { date: "2026-10-06", title: "Teacher's Day" },
+      { date: "2026-10-11", title: "Navarathri pooja begins" },
+      { date: "2026-10-20", title: "Vijayathasami" },
+      { date: "2026-10-21", title: "Tamil Day" },
+      { date: "2026-10-29", title: "Staff meeting" },
+    ],
+  },
+  {
+    name: "November",
+    monthIndex: 10,
+    events: [
+      { date: "2026-11-08", title: "Deepawali" },
+      { date: "2026-11-26", title: "Staff meeting" },
+    ],
+  },
+  {
+    name: "December",
+    monthIndex: 11,
+    events: [
+      { date: "2026-12-02", title: "Teachers farewell function" },
+      { date: "2026-12-04", title: "Third term - second break" },
+      { date: "2026-12-10", title: "Aarumuga navalar guru pooja" },
+    ],
+  },
 ];
 
 const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
