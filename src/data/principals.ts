@@ -61,6 +61,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "B.A.",
     summary:
       "Mrs. Jemmarani Sittampalam, served the college for a brief period. However, her captivating English Literature classes left a lasting impression, and she is fondly remembered at the college for the impact of her teaching.",
+    image: "/images/principals/jemmarani-sittampalam.png",
   },
   {
     slug: "clara-motwani",
@@ -69,7 +70,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "M.A.",
     summary:
       "Mrs. Clara Motwani, who hailed from the United States, served as the next Principal of the college. Though educated and raised in the West, she had a deep interest in Eastern culture, languages, and religions. Married to a North Indian, she embraced Eastern customs, often wearing a saree and blouse. She strongly promoted Tamil, while also emphasizing the global significance of English. She consistently highlighted the importance of English proficiency for higher education, especially in fields like medicine and science. Her focus on both written and spoken English enabled students to become fluent, leading many to achieve prestigious positions in their careers, bringing honor and recognition to their alma mater. During her tenure, she also ensured that the hostel functioned efficiently and with proper organization, which made it possible to accommodate more than 100 students. In addition, the JHLC Old Girls' Association (OGA) was founded on 1-6-1947, marking an important milestone in strengthening the bond between the college and its alumnae.",
-    image: "/images/principals/jemmarani-sittampalam.png",
+    image: "/images/principals/clara-motwani.png",
   },
   {
     slug: "sarojini-rao",
@@ -87,7 +88,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "B.A. (Madras)",
     summary:
       "Mrs. Vimala Arumugam, who rose through the ranks from teacher to Principal, holds the distinction of being the longest-serving principal of Jaffna Hindu Ladies' College. Her deep dedication to the institution was evident-she was truly devoted to its growth and progress. Under her leadership, the college was elevated to Grade I status, and a significant number of students gained admission to the University of Peradeniya.",
-    image: "/images/principals/sarojini-rao.png",
+    image: "/images/principals/vimala-arumugam.png",
   },
   {
     slug: "pathmawathy-ramanathan",
@@ -96,7 +97,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "B.A. (Hons.), Annamalai",
     summary:
       "Miss Ramanathan was yet another remarkable figure who served our college as a Teacher, Vice Principal, and eventually Principal. She began her career as a young teacher in 1950 and steadily rose through the ranks. Known for her strict discipline and leading by example, she earned the respect of students and staff alike. Her unwavering devotion and dedication greatly contributed to the comprehensive development of the college.",
-    image: "/images/principals/vimala-arumugam.png",
+    image: "/images/principals/pathmawathy-ramanathan.png",
   },
   {
     slug: "thivyasironmany-nagarajah",
@@ -105,7 +106,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "B.Sc. (Madras)",
     summary:
       "Mrs. Nagarajah was appointed Principal after serving as a teacher at the college from 1977 to 1986. During her leadership from 1986 to 1993, the student population exceeded 2,000. The college extended its support to displaced students from Pungudutivu by providing them with accommodation. Two bicycle sheds were constructed, and a beautiful flower garden was developed on the campus.",
-    image: "/images/principals/pathmawathy-ramanathan.png",
+    image: "/images/principals/thivyasironmany-nagarajah.png",
   },
   {
     slug: "saraswathy-jeyarajah",
@@ -114,7 +115,7 @@ export const principals: PrincipalProfile[] = [
     qualifications: "B.A. (Hons.), Dip. in Ed., S.L.P.S. I",
     summary:
       "Mrs. Jeyarajah assumed the role of Principal at Jaffna Hindu Ladies' College on 21st October 1993, after serving at the University of Peradeniya and the University of Jaffna, as the Elalai Cluster Principal, and also with the Education Department in Jaffna. Under her leadership, students achieved excellence in both academics and extracurricular activities. Her strong focus on Science and Medicine led to an increase in university admissions, particularly in Medical and Engineering faculties.",
-    image: "/images/principals/thivyasironmany-nagarajah.png",
+    image: "/images/principals/saraswathy-jeyarajah.png",
   },
   {
     slug: "vethanayaki-perinpanathan",
