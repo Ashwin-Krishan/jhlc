@@ -51,7 +51,7 @@ const wishes: Wish[] = [
       "\"முயற்சி திருவினையாக்கும்.\"",
     ],
     image: {
-      src: "/images/principals/thivyasironmany-nagarajah.png",
+      src: "/images/principals/saraswathy.png",
       alt: "திருமதி சரஸ்வதி ஜெயராஜா",
     },
   },

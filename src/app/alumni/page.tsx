@@ -17,7 +17,7 @@ export default function Alumni() {
           </a>
         </li>
         <li>
-          <a href="https://www.facebook.com/groups/411825716043695/" className="underline hover:text-green-900" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.facebook.com/share/g/1JCGgHWhw4/?mibextid=wwXIfr" className="underline hover:text-green-900" target="_blank" rel="noopener noreferrer">
             OGA UK
           </a>
         </li>
