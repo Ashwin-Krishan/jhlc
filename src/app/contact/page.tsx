@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const contactDetails = [
-  { label: "Email", value: "info@jhlc.lk", href: "mailto:info@jhlc.lk" },
+  { label: "Email", value: "jaffnahlc@gmail.com", href: "mailto:jaffnahlc@gmail.com" },
   { label: "Phone", value: "+94 21 222 2222", href: "tel:+94212222222" },
   { label: "Address", value: "Arasady Road, Jaffna, Sri Lanka" },
   { label: "Office Hours", value: "Monday - Friday, 8:00 AM - 3:00 PM" },
