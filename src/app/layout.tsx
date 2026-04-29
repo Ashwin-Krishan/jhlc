@@ -47,10 +47,6 @@ export const metadata: Metadata = {
       "Official website of Jaffna Hindu Ladies College (JHLC), Sri Lanka.",
     images: ["/images/og-cover.jpg"],
   },
-  icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
 };
 
 export default function RootLayout({
