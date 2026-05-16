@@ -1,12 +1,17 @@
 "use client";
 
 import Link from "next/link";
-import { useRef } from "react";
+import { useMemo, useRef } from "react";
 
 import { calendarEvents } from "@/data/calendar";
 
 export default function Calendar() {
   const scrollerRef = useRef<HTMLDivElement>(null);
+  const monthEvents = useMemo(() => {
+    const currentMonth = new Date().toLocaleDateString("en-US", { month: "short" });
+    const filtered = calendarEvents.filter((event) => event.date.includes(currentMonth));
+    return filtered.length > 0 ? filtered : calendarEvents;
+  }, []);
 
   const handleScroll = (direction: "left" | "right") => {
     const node = scrollerRef.current;
@@ -48,7 +53,7 @@ export default function Calendar() {
         className="flex gap-4 overflow-x-auto pb-3 pr-2 snap-x snap-mandatory"
         aria-label="Monthly calendar events"
       >
-        {calendarEvents.map((event) => (
+        {monthEvents.map((event) => (
           <article
             key={event.title}
             className="min-w-[220px] max-w-xs flex-1 snap-start rounded-2xl border border-green-100 bg-white p-4 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"

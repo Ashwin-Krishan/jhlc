@@ -181,8 +181,15 @@ const getMonthCells = (monthIndex: number) => {
   return cells;
 };
 
+const getInitialMonthIndex = () => {
+  const now = new Date();
+  if (now.getFullYear() !== year) return 0;
+  const idx = months.findIndex((m) => m.monthIndex === now.getMonth());
+  return idx >= 0 ? idx : 0;
+};
+
 export default function CalendarPage() {
-  const [activeMonthIndex, setActiveMonthIndex] = useState(3);
+  const [activeMonthIndex, setActiveMonthIndex] = useState(getInitialMonthIndex);
   const [activeEvent, setActiveEvent] = useState<CalendarEvent | null>(null);
   const activeMonth = months[activeMonthIndex];
   const eventsByDate = useMemo(() => {
