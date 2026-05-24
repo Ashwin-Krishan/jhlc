@@ -84,8 +84,8 @@ export default function Navbar() {
         </div>
       </div>
       <div
-        className={`overflow-hidden border-t border-green-100 bg-white transition-[max-height] duration-300 ${
-          open ? "max-h-96" : "max-h-0"
+        className={`border-t border-green-100 bg-white transition-[max-height] duration-300 ${
+          open ? "max-h-[80vh] overflow-y-auto" : "max-h-0 overflow-hidden"
         }`}
       >
         <ul className="flex flex-col gap-1 px-4 py-3 text-base">
