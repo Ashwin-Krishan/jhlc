@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-import { principals } from "@/data/principals";
 
 type IdentityHighlight = {
   title: string;
@@ -182,15 +181,6 @@ function HighlightCard({ item }: { item: IdentityHighlight }) {
 }
 
 export default function About() {
-  const getOneLiner = (summary: string) => {
-    if (!summary) return "";
-    const clean = summary.replace(/\s+/g, " ").trim();
-    if (clean.length <= 160) return clean;
-    const truncated = clean.slice(0, 157);
-    const lastSpace = truncated.lastIndexOf(" ");
-    return `${(lastSpace > 60 ? truncated.slice(0, lastSpace) : truncated).trim()}...`;
-  };
-
   return (
     <section className="max-w-4xl mx-auto px-4 py-12">
       <div className="flex flex-col items-center gap-8 text-center">
@@ -223,46 +213,6 @@ export default function About() {
         ))}
       </div>
 
-      <h2 className="mt-12 text-xl font-semibold text-green-800" id="principals">
-        Former Principals
-      </h2>
-      <p className="mt-3 text-green-800">
-        This column honours the former principals whose vision, dedication, and leadership shaped the growth, values,
-        and academic excellence of our college. Their lasting contributions continue to inspire the school community
-        today.
-      </p>
-      <div className="mt-8 grid gap-6 md:grid-cols-2">
-        {principals.map((principal) => (
-          <article key={principal.slug} id={principal.slug} className="scroll-mt-24 rounded-2xl border border-green-100 bg-white p-6 shadow-sm">
-            <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-              {principal.image ? (
-                <div className="mx-auto flex-shrink-0 sm:mx-0">
-                  <Image
-                    src={principal.image}
-                    alt={`Portrait of ${principal.name}`}
-                    width={140}
-                    height={180}
-                    className="h-44 w-32 rounded-2xl border border-green-100 object-cover shadow-sm"
-                  />
-                </div>
-              ) : null}
-              <div className="flex-1">
-                <h3 className="text-xl font-semibold text-green-900">{principal.name}</h3>
-                <p className="mt-1 text-sm uppercase tracking-wide text-green-600">{principal.years}</p>
-                <p className="mt-3 text-sm text-green-800">
-                  {getOneLiner(principal.summary)}
-                </p>
-                <Link
-                  href={`/principals/${principal.slug}`}
-                  className="mt-4 inline-flex items-center gap-2 rounded-full border border-green-200 bg-green-50 px-4 py-2 text-sm font-semibold text-green-800 shadow-sm transition hover:bg-green-100"
-                >
-                  Read more <span aria-hidden>→</span>
-                </Link>
-              </div>
-            </div>
-          </article>
-        ))}
-      </div>
     </section>
   );
 }
