@@ -105,8 +105,8 @@ export default function Home() {
         <Image src="/images/logo.png" width={104} height={104} alt="Jaffna Hindu Ladies College crest" priority />
         <div className="space-y-2">
           <p className="text-sm uppercase tracking-[0.35em] text-green-600">Since 1943</p>
-          <h1 className="text-4xl font-extrabold text-green-900 md:text-5xl">Jaffna Hindu Ladies College</h1>
-          <p className="text-3xl font-extrabold text-green-900 md:text-4xl">யாழ் இந்து மகளிர் கல்லூரி</p>
+          <h1 className="text-4xl font-extrabold text-green-900 md:text-5xl">Jaffna Hindu Ladies' College</h1>
+          <p className="text-3xl font-extrabold text-green-900 md:text-4xl">யாழ்ப்பாணம் இந்து மகளிர் கல்லூரி</p>
           <p className="text-lg italic text-green-700">“It ought to be beautiful, I live here.”</p>
         </div>
         <p className="max-w-3xl text-green-900 md:text-lg">

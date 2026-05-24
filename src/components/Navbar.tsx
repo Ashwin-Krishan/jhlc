@@ -13,8 +13,9 @@ type NavItem = {
 
 const navItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About JHLC", href: "/about" },
   { label: "History", href: "/history" },
+  { label: "Former Principals", href: "/principals" },
   { label: "Staff", href: "/staff" },
   { label: "Facilities", href: "/facilities" },
   { label: "Gallery", href: "/gallery" },
@@ -23,7 +24,7 @@ const navItems: NavItem[] = [
   { label: "Resources", href: "/resources" },
   { label: "News", href: "/news" },
   { label: "Alumni", href: "/alumni" },
-  { label: "Contact", href: "/contact" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar() {

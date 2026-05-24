@@ -171,11 +171,12 @@ const extractTag = (raw: string) => {
   if (parts.length < 2) return undefined;
   const tag = parts.slice(1).join("-").replace(/_/g, " ").trim();
   if (!tag) return undefined;
-  return tag
+  const label = tag
     .split(" ")
     .filter(Boolean)
     .map((word) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
     .join(" ");
+  return label === "Vice Principal" ? "Assistant Principal" : label;
 };
 
 const parseNumber = (raw: string) => {

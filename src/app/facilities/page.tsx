@@ -19,7 +19,7 @@ const facilities: Facility[] = [
       "Netball and basketball courts, table tennis, cricket grounds, and track-and-field spaces that promote discipline, teamwork, and lifelong fitness.",
   },
   {
-    name: "Visaladchi Mandapam",
+    name: "Visaladchi Hall",
     description:
       "Our modern auditorium for assemblies, cultural showcases, debates, competitions, and milestone celebrations with professional seating and acoustics.",
   },
@@ -36,8 +36,7 @@ const facilities: Facility[] = [
       "Junior Science Lab for foundational experiments and observation.",
       "Physics Lab exploring mechanics, electricity, light, and energy.",
       "Chemistry Lab for studying reactions, compounds, and analysis.",
-      "Botany Lab dedicated to plant science and ecological study.",
-      "Zoology Lab examining animal biology, anatomy, and classification.",
+      "Biology Lab dedicated to the study of plants, animals, ecology, anatomy, and classification.",
     ],
   },
   {
@@ -48,7 +47,17 @@ const facilities: Facility[] = [
   {
     name: "Co-operative Distribution Centre",
     description:
-      "Serving the community since 1951 with affordable food, uniforms, and classroom essentials, reinvesting proceeds to enhance school facilities.",
+      "Serving the community since 1951 with affordable uniforms and classroom essentials, reinvesting proceeds to enhance school facilities.",
+  },
+  {
+    name: "School Canteen",
+    description:
+      "The school canteen provides students and staff with hygienic, nutritious, and affordable food and refreshments in a clean and comfortable environment.",
+  },
+  {
+    name: "Filtered Water Facility",
+    description:
+      "The school provides safe and clean filtered drinking water facilities to ensure the health, hydration, and well-being of all students and staff.",
   },
 ];
 

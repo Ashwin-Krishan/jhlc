@@ -30,7 +30,7 @@ export default async function PrincipalPage({ params }: PrincipalPageProps) {
   if (!principal) {
     return (
       <section className="mx-auto max-w-4xl px-4 py-12">
-        <Link href="/about#principals" className="text-sm font-semibold text-green-700 hover:text-green-900">
+        <Link href="/principals" className="text-sm font-semibold text-green-700 hover:text-green-900">
           ← Back to former principals
         </Link>
         <div className="mt-6 rounded-3xl border border-green-100 bg-white p-6 text-green-900 shadow-sm md:p-8">
@@ -52,7 +52,7 @@ export default async function PrincipalPage({ params }: PrincipalPageProps) {
 
   return (
     <section className="mx-auto max-w-4xl px-4 py-12">
-      <Link href="/about#principals" className="text-sm font-semibold text-green-700 hover:text-green-900">
+      <Link href="/principals" className="text-sm font-semibold text-green-700 hover:text-green-900">
         ← Back to former principals
       </Link>
       <div className="mt-6 rounded-3xl border border-green-100 bg-white p-6 shadow-sm md:p-8">

@@ -21,6 +21,9 @@ const photos = [
   "Secondary science lab .jpg",
   "Temple 4.jpeg",
   "Temple.jpeg",
+  "Computer lab 1.jpg",
+  "Computer lab 2.jpg",
+  "Computer lab 3.jpg",
 ];
 
 const toLabel = (filename: string) =>
